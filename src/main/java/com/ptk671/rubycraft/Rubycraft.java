@@ -20,7 +20,7 @@ public class Rubycraft implements ModInitializer {
 
         //全アイテム/ブロック登録
         RegistryAllitems.register();
-
+////
     }
 
 }
