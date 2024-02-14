@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#X#",
+        "###",
+        " # "
+    ],
+    "key": {
+        "X": {
+            "item": "minecraft:iron_ingot"
+        },
+        "#": {
+            "tag": "c:ruby_ingots"
+        }
+    },
+    "result": {
+        "item": "rubycraft:ruby_shield",
+        "count": 1
+    }
+}

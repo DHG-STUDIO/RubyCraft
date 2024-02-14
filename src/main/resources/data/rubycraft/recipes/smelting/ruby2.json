@@ -1,0 +1,9 @@
+{
+    "type": "minecraft:smelting",
+    "ingredient": {
+        "tag": "c:ruby_dusts"
+    },
+    "result": "rubycraft:ruby",
+    "experience": 0.1,
+    "cookingtime": 100
+}

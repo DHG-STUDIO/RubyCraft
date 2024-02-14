@@ -1,0 +1,18 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "X#X"
+    ],
+    "key": {
+        "X": {
+            "tag": "c:ruby_gears"
+        },
+        "#": {
+            "tag": "c:glass"
+        }
+    },
+    "result": {
+        "item": "rubycraft:ruby_pipe",
+        "count": 8
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "SXS",
+        "X#X",
+        "SXS"
+    ],
+    "key": {
+        "#": {
+            "item": "rubycraft:machine_block"
+        },
+        "X": {
+            "tag": "c:ruby_gears"
+        },
+        "S": {
+            "tag": "fabric:pickaxes"
+        }
+    },
+    "result": {
+        "item": "rubycraft:crushing_machine0",
+        "count": 1
+    }
+}

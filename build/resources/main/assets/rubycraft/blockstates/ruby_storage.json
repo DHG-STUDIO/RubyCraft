@@ -1,0 +1,5 @@
+{
+    "variants": {
+      "": { "model": "rubycraft:block/ruby_storage" }
+    }
+  }

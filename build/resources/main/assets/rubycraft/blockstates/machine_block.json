@@ -1,0 +1,5 @@
+{
+    "variants": {
+      "": { "model": "rubycraft:block/machine_block" }
+    }
+  }
