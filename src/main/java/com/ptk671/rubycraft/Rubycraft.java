@@ -18,9 +18,10 @@ public class Rubycraft implements ModInitializer {
     @Override
     public void onInitialize() {
 
+
         //全アイテム/ブロック登録
         RegistryAllitems.register();
-////
+
     }
 
 }
