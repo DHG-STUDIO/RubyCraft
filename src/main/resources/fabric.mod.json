@@ -10,7 +10,7 @@
     "repo": "https://discord.gg/2J63cYrQQE",
     "homepage": "https://discord.gg/2J63cYrQQE"
   },
-  "license": "MIT",
+  "license": "CC0",
   "icon": "assets/rubycraft/icon.png",
   "environment": "*",
   "entrypoints": {
