@@ -10,7 +10,7 @@
     "repo": "https://discord.gg/2J63cYrQQE",
     "homepage": "https://discord.gg/2J63cYrQQE"
   },
-  "license": "CC0",
+  "license": "CC0W",
   "icon": "assets/rubycraft/icon.png",
   "environment": "*",
   "entrypoints": {
