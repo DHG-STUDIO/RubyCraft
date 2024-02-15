@@ -27,5 +27,6 @@
     "block.rubycraft.machine_block": "Machine Block",
     "block.rubycraft.ruby_pipe": "Ruby Pipe",
     "item.rubycraft.ruby_shield": "Ruby Shield",
+    "item.rubycraft.saw_dust": "Saw Dust",
     "msg.rubycraft.crushing_machine_error": "§cClick on the Ruby Crushing Machine while holding a Ruby, Ruby Ingot, or Ruby Ore."
 }

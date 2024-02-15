@@ -1,5 +1,6 @@
 package com.ptk671.rubycraft;
 
+import fuels.RegistryAllFuels;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 
@@ -20,6 +21,8 @@ public class Rubycraft implements ModInitializer {
         //全アイテム/ブロック登録
         RegistryAllitems.register();
 
+        //燃料の登録
+        RegistryAllFuels.register();
     }
 
 }
