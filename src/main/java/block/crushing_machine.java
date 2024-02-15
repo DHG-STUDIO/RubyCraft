@@ -17,6 +17,7 @@ import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
+import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 
 import static com.ptk671.rubycraft.BlockItems.*;
 import static com.ptk671.rubycraft.Items.*;
@@ -24,11 +25,11 @@ import static com.ptk671.rubycraft.Blocks.*;
 import static net.minecraft.tag.ItemTags.*;
 
 public class crushing_machine extends Block {
-    public crushing_machine(Settings settings) {
-        super(settings);
 
-
+    public crushing_machine(CompatibleBlockSettings settings) {
+        super(settings.build());
     }
+
 
 
     @Override
@@ -92,6 +93,7 @@ public class crushing_machine extends Block {
             player.giveItemStack(new ItemStack(saw_dust, 2));
             return ActionResult.SUCCESS;
         }
+
 
         if (handStack.getItem() == net.minecraft.item.Items.OAK_PLANKS) {
             handStack.setCount(handStack.getCount() - 1);

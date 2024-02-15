@@ -11,13 +11,19 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.BlockRenderView;
 import net.minecraft.world.World;
 import net.minecraft.world.event.listener.GameEventListener;
+import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import org.jetbrains.annotations.Nullable;
 
 import javax.swing.text.html.parser.Entity;
 
 public class Rubychest extends BlockWithEntity {
-    public Rubychest(Settings settings) {
+    /*public Rubychest(Settings settings) {
         super(settings);
+    }
+*/
+
+    public Rubychest(CompatibleBlockSettings settings) {
+        super(settings.build());
     }
 
 

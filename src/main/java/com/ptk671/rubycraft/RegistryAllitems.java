@@ -9,7 +9,7 @@ import static com.ptk671.rubycraft.Rubycraft.id;
 public class RegistryAllitems {
     public static void register() {
         //blocks
-        Registry.register(Registry.BLOCK, id( "ruby_block"), ruby_block);
+
         Registry.register(Registry.BLOCK, id( "polished_ruby_block"), polished_ruby_block);
         Registry.register(Registry.BLOCK, id( "ruby_ore"), ruby_ore);
         Registry.register(Registry.BLOCK, id( "ruby_chest"), ruby_chest);
