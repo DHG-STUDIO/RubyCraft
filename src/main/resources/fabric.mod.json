@@ -5,7 +5,11 @@
   "name": "RubyCraft",
   "_comment": "This is small mod for industry and magic",
   "description": "This is mod that add ruby related things",
-  "authors": ["Pitan,Ptki_uo,mymai1208"],
+  "authors": [
+    "Pitan",
+    "Ptki_uo",
+    "mymai1208"
+  ],
   "contact": {
     "repo": "https://discord.gg/2J63cYrQQE",
     "homepage": "https://discord.gg/2J63cYrQQE"
