@@ -15,10 +15,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.ptk671.rubycraft.client.RubycraftClient"
+      "com.ptk671.rubycraft.client.RubyCraftClient"
     ],
     "main": [
-      "com.ptk671.rubycraft.Rubycraft"
+      "com.ptk671.rubycraft.RubyCraft"
     ]
   },
   "depends": {

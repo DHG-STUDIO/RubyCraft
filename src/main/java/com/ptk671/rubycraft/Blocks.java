@@ -10,39 +10,39 @@ import net.pitan76.mcpitanlib.api.block.CompatibleMaterial;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 
-import static com.ptk671.rubycraft.Rubycraft.id;
-import static com.ptk671.rubycraft.Rubycraft.registry;
+import static com.ptk671.rubycraft.RubyCraft.id;
+import static com.ptk671.rubycraft.RubyCraft.registry;
 
 public class Blocks {
 
-    public static RegistryResult<Block> ruby_block;
-    public static RegistryResult<Block> polished_ruby_block;
-    public static RegistryResult<Block> ruby_ore;
-    public static RegistryResult<Block> ruby_chest;
+    public static RegistryResult<Block> RUBY_BLOCK;
+    public static RegistryResult<Block> POLISHED_RUBY_BLOCK;
+    public static RegistryResult<Block> RUBY_ORE;
+    public static RegistryResult<Block> RUBY_CHEST;
     public static RegistryResult<Block> MACHINE_BLOCK;
-    public static RegistryResult<Block> crushing_machine;
+    public static RegistryResult<Block> CRUSHING_MACHINE;
 
 
     public static void Registry() {
-        ruby_block = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_BLOCK = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(5.0F, 6.0F)
         ));
 
-        polished_ruby_block = registry.registerBlock(id("polished_ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        POLISHED_RUBY_BLOCK = registry.registerBlock(id("polished_ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
         ));
 
-       ruby_ore = registry.registerBlock(id("ruby_ore"), () -> new Rubyore(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
+       RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new Rubyore(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F)
         ));
 
-      ruby_chest = registry.registerBlock(id("ruby_chest"), () -> new Rubychest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+      RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new Rubychest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F,6.0F)
@@ -53,7 +53,7 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.5F, 6.0F)
         ));
-        crushing_machine = registry.registerBlock(id("crushing_machine0"), () -> new crushing_machine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine0"), () -> new crushing_machine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)

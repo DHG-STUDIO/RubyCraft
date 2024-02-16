@@ -1,14 +1,13 @@
 package com.ptk671.rubycraft;
 
-
-import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.pitan76.mcpitanlib.api.item.ExtendSettings;
+import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
+import net.pitan76.mcpitanlib.api.util.ItemUtil;
 
-import static com.ptk671.rubycraft.Rubycraft.id;
-import static com.ptk671.rubycraft.Rubycraft.registry;
-import static com.ptk671.rubycraft.itemgroup.RubyCraftMenu.rubycraft_menu;
+import static com.ptk671.rubycraft.RubyCraft.id;
+import static com.ptk671.rubycraft.RubyCraft.registry;
+import static com.ptk671.rubycraft.itemgroup.CreativeTabs.RUBY_CRAFT_CREATIVE_TAB;
 
 public class BlockItems {
     //blockitem
@@ -20,11 +19,11 @@ public class BlockItems {
     public static RegistryResult<Item> crushing_machine_item;
 
     public static void register() {
-        ruby_block_item = registry.registerItem(id("ruby_block"), () -> new BlockItem(Blocks.ruby_block.get(), new ExtendSettings().group(rubycraft_menu)));
-        polished_ruby_block_item = registry.registerItem(id("polished_ruby_block"), () -> new BlockItem(Blocks.polished_ruby_block.get(), new ExtendSettings().group(rubycraft_menu)));
-        ruby_ore_item = registry.registerItem(id("ruby_ore"), () -> new BlockItem(Blocks.ruby_ore.get(), new ExtendSettings().group(rubycraft_menu)));
-        ruby_chest_item = registry.registerItem(id("ruby_chest"), () -> new BlockItem(Blocks.ruby_chest.get(), new ExtendSettings().group(rubycraft_menu)));
-        machine_block_item = registry.registerItem(id("machine_block"), () -> new BlockItem(Blocks.MACHINE_BLOCK.get(), new ExtendSettings().group(rubycraft_menu)));
-        crushing_machine_item = registry.registerItem(id("crushing_machine"), () -> new BlockItem(Blocks.crushing_machine.get(), new ExtendSettings().group(rubycraft_menu)));
+        ruby_block_item = registry.registerItem(id("ruby_block"), () -> ItemUtil.ofBlock(Blocks.RUBY_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_block"))));
+        polished_ruby_block_item = registry.registerItem(id("polished_ruby_block"), () -> ItemUtil.ofBlock(Blocks.POLISHED_RUBY_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("polished_ruby_block"))));
+        ruby_ore_item = registry.registerItem(id("ruby_ore"), () -> ItemUtil.ofBlock(Blocks.RUBY_ORE.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_ore"))));
+        ruby_chest_item = registry.registerItem(id("ruby_chest"), () -> ItemUtil.ofBlock(Blocks.RUBY_CHEST.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_chest"))));
+        machine_block_item = registry.registerItem(id("machine_block"), () -> ItemUtil.ofBlock(Blocks.MACHINE_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("machine_block"))));
+        crushing_machine_item = registry.registerItem(id("crushing_machine"), () -> ItemUtil.ofBlock(Blocks.CRUSHING_MACHINE.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("crushing_machine"))));
     }
 }

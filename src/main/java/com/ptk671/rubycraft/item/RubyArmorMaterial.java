@@ -10,13 +10,6 @@ import net.pitan76.mcpitanlib.api.item.CompatibleArmorMaterial;
 import java.util.HashMap;
 import java.util.Map;
 
-
-//public static RubyArmorMaterial instance = new RubyArmorMaterial();
-
-//private static final int[] BASE_DURABILITY = new int[] {13, 15, 16, 11};
-//private static final int[] PROTECTION_VALUES = new int[] {4, 7, 6, 4};
-
-
 public class RubyArmorMaterial implements CompatibleArmorMaterial {
     private final Map<ArmorEquipmentType, int[]> ARMOR_SETTINGS = new HashMap<>();
 
@@ -50,7 +43,7 @@ public class RubyArmorMaterial implements CompatibleArmorMaterial {
 
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.Rubyingot.get());
+        return Ingredient.ofItems(Items.RUBY_INGOT.get());
     }
 
     @Override
