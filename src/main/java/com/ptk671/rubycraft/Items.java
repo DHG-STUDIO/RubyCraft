@@ -1,7 +1,6 @@
 package com.ptk671.rubycraft;
 
-import com.ptk671.rubycraft.item.RubyArmorMaterial;
-import com.ptk671.rubycraft.item.RubyToolMaterial;
+import com.ptk671.rubycraft.item.*;
 import net.minecraft.entity.EquipmentSlot;
 import net.minecraft.item.ArmorItem;
 import net.minecraft.item.FoodComponent;
@@ -44,18 +43,18 @@ public class Items {
 
     public static void Registry()
     {
-        Ruby = registry.registerItem(id("ruby"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby"))));
-        RubyDust = registry.registerItem(id("ruby_dust"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_dust"))));
-        Rubynuget = registry.registerItem(id("ruby_nugget"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_nugget"))));
-        Rubypearl = registry.registerItem(id("ruby_pearl"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_pearl"))));
-        Rubyapple = registry.registerItem(id("ruby_apple"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_apple")).food(new FoodComponent.Builder()
+        Ruby = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby"))));
+        RubyDust = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_dust"))));
+        Rubynuget = registry.registerItem(id("ruby_nugget"), () -> new RubyNugget(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_nugget"))));
+        Rubypearl = registry.registerItem(id("ruby_pearl"), () -> new RubyPearl(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_pearl"))));
+        Rubyapple = registry.registerItem(id("ruby_apple"), () -> new RubyApple(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_apple")).food(new FoodComponent.Builder()
                 .hunger(6)
                 .saturationModifier(5F)
                 .build()
         )));
-        Rubyingot = registry.registerItem(id("ruby_ingot"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_ingot"))));
-        Rubycane = registry.registerItem(id("ruby_cane"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_cane")).maxCount(1)));
-        Rubygear = registry.registerItem(id("ruby_gear"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_gear"))));
+        Rubyingot = registry.registerItem(id("ruby_ingot"), () -> new RubyIngot(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_ingot"))));
+        Rubycane = registry.registerItem(id("ruby_cane"), () -> new RubyCane(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_cane")).maxCount(1)));
+        Rubygear = registry.registerItem(id("ruby_gear"), () -> new RubyGear(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_gear"))));
         saw_dust = registry.registerItem(id("saw_dust"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("saw_dust"))));
 
         //TOOLS

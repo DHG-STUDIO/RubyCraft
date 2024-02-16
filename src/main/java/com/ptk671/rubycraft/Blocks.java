@@ -48,7 +48,6 @@ public class Blocks {
                 .strength(3.0F,6.0F)
         ));
 
-
         MACHINE_BLOCK = registry.registerBlock(id("machine_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
@@ -59,8 +58,5 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)
         ));
-
-
-
     }
 }
