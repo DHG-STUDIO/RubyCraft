@@ -43,6 +43,8 @@ public class Items {
 
     public static void Registry()
     {
+        //Items
+        //
         RUBY = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby"))));
         RUBY_DUST = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_dust"))));
         RUBY_NUGET = registry.registerItem(id("ruby_nugget"), () -> new RubyNugget(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_nugget"))));
