@@ -1,6 +1,6 @@
 package com.ptk671.rubycraft;
 
-import com.ptk671.rubycraft.fuels.RegistryAllFuels;
+import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
@@ -21,16 +21,17 @@ public class RubyCraft implements ModInitializer {
 
     @Override
     public void onInitialize() {
+        //クリエイティブタブの登録
         CreativeTabs.register();
+
+        //アイテム登録
+        Items.Registry();
 
         //ブロック登録
         Blocks.Registry();
 
-        //アイテム登録
-        RegistryAlIItems.register();
-
         //燃料の登録
-        RegistryAllFuels.register();
+        Fuels.register();
 
         registry.allRegister();
     }

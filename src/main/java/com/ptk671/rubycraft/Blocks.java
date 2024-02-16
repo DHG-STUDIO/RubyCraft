@@ -24,6 +24,7 @@ public class Blocks {
 
 
     public static void Registry() {
+
         RUBY_BLOCK = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
@@ -58,5 +59,10 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)
         ));
+
+
+        //ブロックアイテムの登録////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+        BlockItems.register();
+        ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
 }
