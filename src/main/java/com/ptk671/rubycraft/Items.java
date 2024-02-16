@@ -1,10 +1,10 @@
 package com.ptk671.rubycraft;
 
 import com.ptk671.rubycraft.item.*;
-import net.minecraft.entity.EquipmentSlot;
-import net.minecraft.item.ArmorItem;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
+import net.pitan76.mcpitanlib.api.item.ArmorEquipmentType;
+import net.pitan76.mcpitanlib.api.item.CompatibleArmorItem;
 import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
 import net.pitan76.mcpitanlib.api.item.ExtendItem;
 import net.pitan76.mcpitanlib.api.item.tool.*;
@@ -66,9 +66,9 @@ public class Items {
         RUBY_HOE = registry.registerItem(id("ruby_hoe"), () -> new CompatibleHoeItem(0, -3.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_hoe"))));
 
         //armors
-        RUBY_HELMET = registry.registerItem(id("ruby_helmet"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.HEAD, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_helmet")).build()));
-        RUBY_CHESTPLATE = registry.registerItem(id("ruby_chestplate"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.CHEST, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_chestplate")).build()));
-        RUBY_LEGGINGS = registry.registerItem(id("ruby_leggings"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.LEGS, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_leggings")).build()));
-        RUBY_BOOTS = registry.registerItem(id("ruby_boots"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.FEET, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_boots")).build()));
+        RUBY_HELMET = registry.registerItem(id("ruby_helmet"), () -> new CompatibleArmorItem(ARMOR_MATERIAL, ArmorEquipmentType.HEAD, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_helmet"))));
+        RUBY_CHESTPLATE = registry.registerItem(id("ruby_chestplate"), () -> new CompatibleArmorItem(ARMOR_MATERIAL, ArmorEquipmentType.CHEST, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_chestplate"))));
+        RUBY_LEGGINGS = registry.registerItem(id("ruby_leggings"), () -> new CompatibleArmorItem(ARMOR_MATERIAL, ArmorEquipmentType.LEGS, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_leggings"))));
+        RUBY_BOOTS = registry.registerItem(id("ruby_boots"), () -> new CompatibleArmorItem(ARMOR_MATERIAL, ArmorEquipmentType.FEET, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_boots"))));
     }
 }
