@@ -6,6 +6,9 @@ import net.minecraft.item.ArmorMaterial;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.pitan76.mcpitanlib.api.item.ArmorEquipmentType;
+import net.pitan76.mcpitanlib.api.item.CompatibleArmorMaterial;
+import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
 
 
 //public static RubyArmorMaterial instance = new RubyArmorMaterial();
@@ -14,12 +17,18 @@ import net.minecraft.sound.SoundEvents;
 //private static final int[] PROTECTION_VALUES = new int[] {4, 7, 6, 4};
 
 
-
-
-
 public class RubyArmorMaterial implements ArmorMaterial {
+
+
+
+
     int[] BASE_DURABILITY = new int[]{13, 15, 16, 11};
     int[] PROTECTION_VALUES = new int[] {4, 7, 6, 4};
+
+
+
+
+
     @Override
     public int getDurability(EquipmentSlot slot) {
         return BASE_DURABILITY[slot.getEntitySlotId()] * 30;

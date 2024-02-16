@@ -1,8 +1,9 @@
 package item;
 
-import com.ptk671.rubycraft.Items;
+import com.ptk671.rubycraft.Items.*;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
+
 
 public class RubyToolMaterial implements ToolMaterial {
     //耐久値
@@ -33,6 +34,6 @@ public class RubyToolMaterial implements ToolMaterial {
 //金床で修理する時に使うアイテム
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Items.Rubyingot);
+        return Ingredient.ofItems(Rubyingot);
     }
 }

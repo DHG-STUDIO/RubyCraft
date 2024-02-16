@@ -2,6 +2,7 @@ package block;
 
 import com.ptk671.rubycraft.BlockItems;
 import com.ptk671.rubycraft.Items;
+import item.Ruby;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -41,7 +42,7 @@ public class crushing_machine extends Block {
 
 
 
-        if (handStack.getItem() == Items.Ruby) {
+        if (handStack.getItem() == Ruby) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(RubyDust, 1));
             return ActionResult.SUCCESS;

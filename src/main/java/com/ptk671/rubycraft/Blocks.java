@@ -19,14 +19,13 @@ public class Blocks {
 
     public static RegistryResult<Block> ruby_block;
     public static RegistryResult<Block>  polished_ruby_block;
-
     public static RegistryResult<Block>  ruby_ore;
     public static RegistryResult<Block>  ruby_chest;
     public static RegistryResult<Block>  MACHINE_BLOCK;
     public static RegistryResult<Block>  crushing_machine;
 
 
-    public static void Blocks() {
+    public static void Registry() {
         ruby_block = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)

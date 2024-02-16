@@ -1,4 +1,4 @@
-package com.ptk671.rubycraft;
+/*package com.ptk671.rubycraft;
 import net.minecraft.util.registry.Registry;
 
 import static com.ptk671.rubycraft.BlockItems.*;
@@ -8,6 +8,7 @@ import static com.ptk671.rubycraft.Rubycraft.id;
 
 public class RegistryAllitems {
     public static void register() {
+
         //blocks
 
         Registry.register(Registry.BLOCK, id( "polished_ruby_block"), polished_ruby_block);
@@ -43,4 +44,4 @@ public class RegistryAllitems {
     }
 
 }
-
+*/
