@@ -1,6 +1,5 @@
-package block;
+package com.ptk671.rubycraft.block;
 
-import net.minecraft.block.BlockRenderType;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;
 import net.minecraft.block.entity.BlockEntity;
@@ -14,8 +13,6 @@ import net.minecraft.world.event.listener.GameEventListener;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import org.jetbrains.annotations.Nullable;
 
-import javax.swing.text.html.parser.Entity;
-
 public class Rubychest extends BlockWithEntity {
     /*public Rubychest(Settings settings) {
         super(settings);
@@ -25,8 +22,6 @@ public class Rubychest extends BlockWithEntity {
     public Rubychest(CompatibleBlockSettings settings) {
         super(settings.build());
     }
-
-
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {

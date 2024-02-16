@@ -1,4 +1,4 @@
-package item;
+package com.ptk671.rubycraft.item;
 
 import net.minecraft.item.PickaxeItem;
 import net.minecraft.item.ToolMaterial;

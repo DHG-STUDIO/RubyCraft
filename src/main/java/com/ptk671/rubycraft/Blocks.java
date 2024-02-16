@@ -1,28 +1,26 @@
 package com.ptk671.rubycraft;
 
-import block.*;
-import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
+import com.ptk671.rubycraft.block.Rubychest;
+import com.ptk671.rubycraft.block.Rubyore;
+import com.ptk671.rubycraft.block.crushing_machine;
 import net.minecraft.block.Block;
-import net.minecraft.block.Material;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.Identifier;
-import net.minecraft.util.registry.Registry;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.block.CompatibleMaterial;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 
-import static net.pitan76.mcpitanlib.MCPitanLib.id;
-import static net.pitan76.mcpitanlib.MCPitanLib.registry;
+import static com.ptk671.rubycraft.Rubycraft.id;
+import static com.ptk671.rubycraft.Rubycraft.registry;
 
 public class Blocks {
 
     public static RegistryResult<Block> ruby_block;
-    public static RegistryResult<Block>  polished_ruby_block;
-    public static RegistryResult<Block>  ruby_ore;
-    public static RegistryResult<Block>  ruby_chest;
-    public static RegistryResult<Block>  MACHINE_BLOCK;
-    public static RegistryResult<Block>  crushing_machine;
+    public static RegistryResult<Block> polished_ruby_block;
+    public static RegistryResult<Block> ruby_ore;
+    public static RegistryResult<Block> ruby_chest;
+    public static RegistryResult<Block> MACHINE_BLOCK;
+    public static RegistryResult<Block> crushing_machine;
 
 
     public static void Registry() {

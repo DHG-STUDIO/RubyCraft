@@ -1,6 +1,6 @@
-package item;
+package com.ptk671.rubycraft.item;
 
-import com.ptk671.rubycraft.Items.*;
+import com.ptk671.rubycraft.Items;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
@@ -34,6 +34,6 @@ public class RubyToolMaterial implements ToolMaterial {
 //金床で修理する時に使うアイテム
     @Override
     public Ingredient getRepairIngredient() {
-        return Ingredient.ofItems(Rubyingot);
+        return Ingredient.ofItems(() -> Items.Rubyingot.getOrNull());
     }
 }

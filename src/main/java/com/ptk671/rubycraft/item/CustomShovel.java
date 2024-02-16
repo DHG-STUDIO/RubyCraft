@@ -1,6 +1,5 @@
-package item;
+package com.ptk671.rubycraft.item;
 
-import net.minecraft.item.Item;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.ToolMaterial;
 
