@@ -18,9 +18,9 @@ import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
 
-public class crushing_machine extends Block {
+public class CrushingMachine extends Block {
 
-    public crushing_machine(CompatibleBlockSettings settings) {
+    public CrushingMachine(CompatibleBlockSettings settings) {
         super(settings.build());
     }
 

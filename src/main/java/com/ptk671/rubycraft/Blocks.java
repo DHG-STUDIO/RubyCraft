@@ -1,8 +1,8 @@
 package com.ptk671.rubycraft;
 
-import com.ptk671.rubycraft.block.Rubychest;
-import com.ptk671.rubycraft.block.Rubyore;
-import com.ptk671.rubycraft.block.crushing_machine;
+import com.ptk671.rubycraft.block.RubyChest;
+import com.ptk671.rubycraft.block.RubyOre;
+import com.ptk671.rubycraft.block.CrushingMachine;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
@@ -36,13 +36,13 @@ public class Blocks {
                 .strength(3.5F, 6.0F)
         ));
 
-       RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new Rubyore(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
+       RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F)
         ));
 
-      RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new Rubychest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+      RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F,6.0F)
@@ -53,7 +53,7 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.5F, 6.0F)
         ));
-        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine0"), () -> new crushing_machine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine0"), () -> new CrushingMachine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)

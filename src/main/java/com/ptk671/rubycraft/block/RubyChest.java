@@ -13,13 +13,13 @@ import net.minecraft.world.event.listener.GameEventListener;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import org.jetbrains.annotations.Nullable;
 
-public class Rubychest extends BlockWithEntity {
+public class RubyChest extends BlockWithEntity {
     /*public Rubychest(Settings settings) {
         super(settings);
     }
 */
 
-    public Rubychest(CompatibleBlockSettings settings) {
+    public RubyChest(CompatibleBlockSettings settings) {
         super(settings.build());
     }
     @Nullable
