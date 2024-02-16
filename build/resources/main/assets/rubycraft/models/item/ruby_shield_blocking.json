@@ -1,6 +1,0 @@
-{
-    "parent":"fabricshieldlib:item/template_shield_blocking",
-    "textures":{
-        "shield":"rubycraft:items/ruby_shield"
-    }
-}
