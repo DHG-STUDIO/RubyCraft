@@ -10,64 +10,64 @@ import net.pitan76.mcpitanlib.api.item.ExtendItem;
 import net.pitan76.mcpitanlib.api.item.tool.*;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 
-import static com.ptk671.rubycraft.Rubycraft.id;
-import static com.ptk671.rubycraft.Rubycraft.registry;
-import static com.ptk671.rubycraft.itemgroup.RubyCraftMenu.rubycraft_menu;
+import static com.ptk671.rubycraft.ArmorToolMaterials.ARMOR_MATERIAL;
+import static com.ptk671.rubycraft.ArmorToolMaterials.TOOL_MATERIAL;
+import static com.ptk671.rubycraft.RubyCraft.id;
+import static com.ptk671.rubycraft.RubyCraft.registry;
+import static com.ptk671.rubycraft.itemgroup.CreativeTabs.RUBY_CRAFT_CREATIVE_TAB;
 
 public class Items {
-    //
-    public static RegistryResult<Item> Ruby;
-    public static RegistryResult<Item> RubyDust;
-    public static RegistryResult<Item> Rubyingot;
-    public static RegistryResult<Item> Rubynuget;
-    public static RegistryResult<Item> Rubypearl;
-    public static RegistryResult<Item> Rubyapple;
-    public static RegistryResult<Item> Rubycane;
-    public static RegistryResult<Item> Rubygear;
-    public static RegistryResult<Item> saw_dust;
-//
-    public static RubyArmorMaterial Armor_MATERIAL = new RubyArmorMaterial();
-    public static RubyToolMaterial TOOL_MATERIAL = new RubyToolMaterial();
-//
-    public static RegistryResult<Item> Rubysword;
-    public static RegistryResult <Item> Rubyaxe;
-    public static RegistryResult <Item> Rubypickaxe;
-    public static RegistryResult <Item> RubyShovel;
-    public static RegistryResult <Item> RubyHoe;
+    // en: Materials , ja: 材料
+    public static RegistryResult<Item> RUBY;
+    public static RegistryResult<Item> RUBY_DUST;
+    public static RegistryResult<Item> RUBY_INGOT;
+    public static RegistryResult<Item> RUBY_NUGET;
+    public static RegistryResult<Item> RUBY_PEARL;
+    public static RegistryResult<Item> RUBY_APPLE;
+    public static RegistryResult<Item> RUBY_CANE;
+    public static RegistryResult<Item> RUBY_GEAR;
+    public static RegistryResult<Item> SAW_DUST;
 
-    //
-    public static RegistryResult <Item> RubyHelmet;
-    public static RegistryResult <Item> RubyChestplate;
-    public static RegistryResult <Item> RubyLEGGINS;
-    public static RegistryResult <Item> RubyBOOTS;
+    // en: Tools , ja: ツール
+    public static RegistryResult<Item> RUBY_SWORD;
+    public static RegistryResult <Item> RUBY_AXE;
+    public static RegistryResult <Item> RUBY_PICKAXE;
+    public static RegistryResult <Item> RUBY_SHOVEL;
+    public static RegistryResult <Item> RUBY_HOE;
+
+    // en: Armor , ja: 防具
+    public static RegistryResult <Item> RUBY_HELMET;
+    public static RegistryResult <Item> RUBY_CHESTPLATE;
+    public static RegistryResult <Item> RUBY_LEGGINGS;
+    public static RegistryResult <Item> RUBY_BOOTS;
 
     public static void Registry()
     {
-        Ruby = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby"))));
-        RubyDust = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_dust"))));
-        Rubynuget = registry.registerItem(id("ruby_nugget"), () -> new RubyNugget(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_nugget"))));
-        Rubypearl = registry.registerItem(id("ruby_pearl"), () -> new RubyPearl(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_pearl"))));
-        Rubyapple = registry.registerItem(id("ruby_apple"), () -> new RubyApple(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_apple")).food(new FoodComponent.Builder()
+        RUBY = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby"))));
+        RUBY_DUST = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_dust"))));
+        RUBY_NUGET = registry.registerItem(id("ruby_nugget"), () -> new RubyNugget(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_nugget"))));
+        RUBY_PEARL = registry.registerItem(id("ruby_pearl"), () -> new RubyPearl(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_pearl"))));
+        RUBY_APPLE = registry.registerItem(id("ruby_apple"), () -> new RubyApple(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_apple")).food(new FoodComponent.Builder()
                 .hunger(6)
                 .saturationModifier(5F)
                 .build()
         )));
-        Rubyingot = registry.registerItem(id("ruby_ingot"), () -> new RubyIngot(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_ingot"))));
-        Rubycane = registry.registerItem(id("ruby_cane"), () -> new RubyCane(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_cane")).maxCount(1)));
-        Rubygear = registry.registerItem(id("ruby_gear"), () -> new RubyGear(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_gear"))));
-        saw_dust = registry.registerItem(id("saw_dust"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("saw_dust"))));
+        RUBY_INGOT = registry.registerItem(id("ruby_ingot"), () -> new RubyIngot(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_ingot"))));
+        RUBY_CANE = registry.registerItem(id("ruby_cane"), () -> new RubyCane(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_cane")).maxCount(1)));
+        RUBY_GEAR = registry.registerItem(id("ruby_gear"), () -> new RubyGear(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_gear"))));
+        SAW_DUST = registry.registerItem(id("saw_dust"), () -> new ExtendItem(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("saw_dust"))));
 
         //TOOLS
-        Rubysword = registry.registerItem(id("ruby_sword"), () -> new CompatibleSwordItem(3, -1.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_sword"))));
-        Rubyaxe = registry.registerItem(id("ruby_axe"), () -> new CompatibleAxeItem(1, -1F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_axe"))));
-        Rubypickaxe = registry.registerItem(id("ruby_pickaxe"), () -> new CompatiblePickaxeItem(1, -2.5F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_pickaxe"))));
-        RubyShovel= registry.registerItem(id("ruby_shovel"), () -> new CompatibleShovelItem(1F, -3.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_shovel"))));
-        RubyHoe = registry.registerItem(id("ruby_hoe"), () -> new CompatibleHoeItem(0, -3.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_hoe"))));
+        RUBY_SWORD = registry.registerItem(id("ruby_sword"), () -> new CompatibleSwordItem(3, -1.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_sword"))));
+        RUBY_AXE = registry.registerItem(id("ruby_axe"), () -> new CompatibleAxeItem(1, -1F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_axe"))));
+        RUBY_PICKAXE = registry.registerItem(id("ruby_pickaxe"), () -> new CompatiblePickaxeItem(1, -2.5F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_pickaxe"))));
+        RUBY_SHOVEL = registry.registerItem(id("ruby_shovel"), () -> new CompatibleShovelItem(1F, -3.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_shovel"))));
+        RUBY_HOE = registry.registerItem(id("ruby_hoe"), () -> new CompatibleHoeItem(0, -3.0F, TOOL_MATERIAL, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_hoe"))));
 
         //armors
-        RubyHelmet = registry.registerItem(id("ruby_helmet"), () -> new ArmorItem(Armor_MATERIAL, EquipmentSlot.HEAD, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_helmet")).build()));
-        RubyChestplate = registry.registerItem(id("ruby_chestplate"), () -> new ArmorItem(Armor_MATERIAL, EquipmentSlot.CHEST, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_chestplate")).build()));
-        RubyLEGGINS = registry.registerItem(id("ruby_leggings"), () -> new ArmorItem(Armor_MATERIAL, EquipmentSlot.LEGS, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_leggings")).build()));
-        RubyBOOTS = registry.registerItem(id("ruby_boots"), () -> new ArmorItem(Armor_MATERIAL, EquipmentSlot.FEET, new CompatibleItemSettings().addGroup(() -> rubycraft_menu, id("ruby_boots")).build()));
+        RUBY_HELMET = registry.registerItem(id("ruby_helmet"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.HEAD, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_helmet")).build()));
+        RUBY_CHESTPLATE = registry.registerItem(id("ruby_chestplate"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.CHEST, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_chestplate")).build()));
+        RUBY_LEGGINGS = registry.registerItem(id("ruby_leggings"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.LEGS, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_leggings")).build()));
+        RUBY_BOOTS = registry.registerItem(id("ruby_boots"), () -> new ArmorItem(ARMOR_MATERIAL, EquipmentSlot.FEET, new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_boots")).build()));
     }
 }

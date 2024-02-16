@@ -5,7 +5,11 @@
   "name": "RubyCraft",
   "_comment": "This is small mod for industry and magic",
   "description": "This is mod that add ruby related things",
-  "authors": ["Pitan,Ptki_uo,mymai1208"],
+  "authors": [
+    "Pitan",
+    "Ptki_uo",
+    "mymai1208"
+  ],
   "contact": {
     "repo": "https://discord.gg/2J63cYrQQE",
     "homepage": "https://discord.gg/2J63cYrQQE"
@@ -15,10 +19,10 @@
   "environment": "*",
   "entrypoints": {
     "client": [
-      "com.ptk671.rubycraft.client.RubycraftClient"
+      "com.ptk671.rubycraft.client.RubyCraftClient"
     ],
     "main": [
-      "com.ptk671.rubycraft.Rubycraft"
+      "com.ptk671.rubycraft.RubyCraft"
     ]
   },
   "depends": {
