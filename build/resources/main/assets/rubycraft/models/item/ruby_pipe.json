@@ -1,6 +1,0 @@
-{
-    "parent": "simple_pipes:item/pipe",
-    "textures": {
-        "main": "rubycraft:ruby_pipe"
-    }
-}
