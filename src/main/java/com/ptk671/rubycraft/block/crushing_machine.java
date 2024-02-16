@@ -15,7 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 
-import static com.ptk671.rubycraft.BlockItems.ruby_ore_item;
+import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
 
 public class crushing_machine extends Block {
@@ -44,7 +44,7 @@ public class crushing_machine extends Block {
             return ActionResult.SUCCESS;
         }
 
-        if (handStack.getItem() == ruby_ore_item.get()) {
+        if (handStack.getItem() == RUBY_ORE_ITEM.get()) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(RUBY_DUST.get(), 3));
             return ActionResult.SUCCESS;

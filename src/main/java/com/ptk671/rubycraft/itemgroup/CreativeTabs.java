@@ -8,7 +8,6 @@ import net.pitan76.mcpitanlib.api.item.CreativeTabBuilder;
 import static com.ptk671.rubycraft.RubyCraft.id;
 import static com.ptk671.rubycraft.RubyCraft.registry;
 
-
 public class CreativeTabs {
     public static ItemGroup RUBY_CRAFT_CREATIVE_TAB;
 
