@@ -7,16 +7,17 @@ import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.tag.ItemTags;
-import net.minecraft.text.TranslatableText;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.Hand;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
+import net.pitan76.mcpitanlib.api.util.TextUtil;
 
 import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
+
 
 public class CrushingMachine extends Block {
 
@@ -24,11 +25,21 @@ public class CrushingMachine extends Block {
         super(settings.build());
     }
 
+
+
+
+
+
+
+
+
+
     @Override
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
         if (world.isClient) {
             return ActionResult.SUCCESS;
         }
+
 
         ItemStack handStack = player.getMainHandStack();
 
@@ -88,8 +99,9 @@ public class CrushingMachine extends Block {
             return ActionResult.SUCCESS;
         }
 
-        player.sendMessage(new TranslatableText("msg.rubycraft.crushing_machine_error"), false);
 
+
+        player.sendMessage(TextUtil.translatable("msg.rubycraft.crushing_machine_error"), false);
         return ActionResult.FAIL;
 
 

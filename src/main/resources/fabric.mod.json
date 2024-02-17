@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "rubycraft",
-  "version": "0.3.1 (testbuild20240215)",
+  "version": "0.3.1 (testbuild20240217)",
   "name": "RubyCraft",
   "_comment": "This is small mod for industry and magic",
   "description": "This is mod that add ruby related things",
@@ -11,8 +11,9 @@
     "mymai1208"
   ],
   "contact": {
-    "repo": "https://discord.gg/2J63cYrQQE",
-    "homepage": "https://discord.gg/2J63cYrQQE"
+    "homepage": "https://github.com/Ptkiuo/RubyCraft",
+    "sources": "https://github.com/PTOM76/RubyCraft",
+    "issues": "https://github.com/Ptkiuo/RubyCraft/issues"
   },
   "license": "CC0",
   "icon": "assets/rubycraft/icon.png",
@@ -28,8 +29,6 @@
   "depends": {
     "fabricloader": "*",
     "mcpitanlib": ">2.0.0",
-    "minecraft": [
-">=1.16"
-    ]
+    "minecraft": [">=1.17"]
   }
 }

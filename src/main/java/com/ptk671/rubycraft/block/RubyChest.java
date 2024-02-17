@@ -14,11 +14,6 @@ import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import org.jetbrains.annotations.Nullable;
 
 public class RubyChest extends BlockWithEntity {
-    /*public Rubychest(Settings settings) {
-        super(settings);
-    }
-*/
-
     public RubyChest(CompatibleBlockSettings settings) {
         super(settings.build());
     }
@@ -44,5 +39,7 @@ public class RubyChest extends BlockWithEntity {
     public BlockState getAppearance(BlockState state, BlockRenderView renderView, BlockPos pos, Direction side, @Nullable BlockState sourceState, @Nullable BlockPos sourcePos) {
         return super.getAppearance(state, renderView, pos, side, sourceState, sourcePos);
     }
+
+
 }
 

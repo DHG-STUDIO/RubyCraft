@@ -1,6 +1,6 @@
 {
   "parent": "item/handheld",
   "textures": {
-    "layer0": "rubycraft:items/ruby_cane"
+    "layer0": "rubycraft:item/ruby_cane"
   }
 }
