@@ -1,14 +1,12 @@
 package com.ptk671.rubycraft.client;
 
-import net.fabricmc.fabric.api.event.client.ClientSpriteRegistryCallback;
 import net.minecraft.client.render.TexturedRenderLayers;
+import net.pitan76.mcpitanlib.api.client.registry.ArchRegistryClient;
 
 import static com.ptk671.rubycraft.RubyCraft.id;
 
 public class Textures {
     public static void register() {
-        ClientSpriteRegistryCallback.event(TexturedRenderLayers.CHEST_ATLAS_TEXTURE).register((texture, registry) -> {
-            registry.register(id("model/ruby_chest"));
-        });
+        ArchRegistryClient.registryClientSprite(TexturedRenderLayers.CHEST_ATLAS_TEXTURE, id("model/ruby_chest"));
     }
 }
