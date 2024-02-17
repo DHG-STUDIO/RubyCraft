@@ -1,4 +1,5 @@
 package com.ptk671.rubycraft.block;
+
 import com.ptk671.rubycraft.item.Ruby;
 import com.ptk671.rubycraft.item.RubyIngot;
 import net.minecraft.block.Block;
@@ -14,6 +15,7 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.util.TextUtil;
+
 import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
 public class CrushingMachine extends Block {

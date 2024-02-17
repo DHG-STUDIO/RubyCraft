@@ -1,8 +1,8 @@
 package com.ptk671.rubycraft;
 
+import com.ptk671.rubycraft.block.CrushingMachine;
 import com.ptk671.rubycraft.block.RubyChest;
 import com.ptk671.rubycraft.block.RubyOre;
-import com.ptk671.rubycraft.block.CrushingMachine;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
