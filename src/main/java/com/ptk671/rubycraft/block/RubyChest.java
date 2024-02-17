@@ -17,6 +17,7 @@ public class RubyChest extends BlockWithEntity {
     public RubyChest(CompatibleBlockSettings settings) {
         super(settings.build());
     }
+
     @Nullable
     @Override
     public BlockEntity createBlockEntity(BlockPos pos, BlockState state) {

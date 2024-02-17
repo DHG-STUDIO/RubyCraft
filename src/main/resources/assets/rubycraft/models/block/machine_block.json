@@ -1,6 +1,6 @@
 {
-    "parent": "block/cube_all",
-    "textures": {
-      "all": "rubycraft:block/crushing_machine_leftrightback"
-    }
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "rubycraft:block/crushing_machine_leftrightback"
   }
+}

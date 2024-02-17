@@ -18,25 +18,16 @@ import net.pitan76.mcpitanlib.api.util.TextUtil;
 
 import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
+
 public class CrushingMachine extends Block {
 
+    int STICK_1 = 4;
+    int STICK_2 = 8;
     public CrushingMachine(CompatibleBlockSettings settings) {
         super(settings.build());
     }
 
-
-
-
-
-
-
-
-
-    int STICK_1 = 4;
-    int STICK_2 = 8;
-
     @Override
-
 
 
     public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
@@ -115,7 +106,6 @@ public class CrushingMachine extends Block {
             player.giveItemStack(new ItemStack(SAW_DUST.get(), 4));
             return ActionResult.SUCCESS;
         }
-
 
 
         player.sendMessage(TextUtil.translatable("msg.rubycraft.crushing_machine_error"), false);

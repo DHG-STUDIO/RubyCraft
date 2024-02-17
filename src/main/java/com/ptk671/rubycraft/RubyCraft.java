@@ -1,10 +1,10 @@
 package com.ptk671.rubycraft;
+
 import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
-
 
 public class RubyCraft implements ModInitializer {
     /**

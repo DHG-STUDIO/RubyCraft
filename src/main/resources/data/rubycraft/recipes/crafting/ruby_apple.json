@@ -1,20 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        " # ",
-        "#X#",
-        " # "
-    ],
-    "key": {
-        "X": {
-            "item": "minecraft:apple"
-        },
-        "#": {
-            "tag": "c:ruby_ingots"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " # ",
+    "#X#",
+    " # "
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:apple"
     },
-    "result": {
-        "item": "rubycraft:ruby_apple",
-        "count": 4
+    "#": {
+      "tag": "c:ruby_ingots"
     }
+  },
+  "result": {
+    "item": "rubycraft:ruby_apple",
+    "count": 4
+  }
 }

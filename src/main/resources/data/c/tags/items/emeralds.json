@@ -1,6 +1,6 @@
 {
-    "replace": false,
-    "values": [
-      "rubycraft:ruby"
-    ]
-  }
+  "replace": false,
+  "values": [
+    "rubycraft:ruby"
+  ]
+}

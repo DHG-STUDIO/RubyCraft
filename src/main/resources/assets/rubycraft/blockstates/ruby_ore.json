@@ -1,5 +1,7 @@
 {
-    "variants": {
-      "": { "model": "rubycraft:block/ruby_ore" }
+  "variants": {
+    "": {
+      "model": "rubycraft:block/ruby_ore"
     }
   }
+}

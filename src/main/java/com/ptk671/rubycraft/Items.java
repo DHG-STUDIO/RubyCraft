@@ -31,19 +31,18 @@ public class Items {
 
     // en: Tools , ja: ツール
     public static RegistryResult<Item> RUBY_SWORD;
-    public static RegistryResult <Item> RUBY_AXE;
-    public static RegistryResult <Item> RUBY_PICKAXE;
-    public static RegistryResult <Item> RUBY_SHOVEL;
-    public static RegistryResult <Item> RUBY_HOE;
+    public static RegistryResult<Item> RUBY_AXE;
+    public static RegistryResult<Item> RUBY_PICKAXE;
+    public static RegistryResult<Item> RUBY_SHOVEL;
+    public static RegistryResult<Item> RUBY_HOE;
 
     // en: Armor , ja: 防具
-    public static RegistryResult <Item> RUBY_HELMET;
-    public static RegistryResult <Item> RUBY_CHESTPLATE;
-    public static RegistryResult <Item> RUBY_LEGGINGS;
-    public static RegistryResult <Item> RUBY_BOOTS;
+    public static RegistryResult<Item> RUBY_HELMET;
+    public static RegistryResult<Item> RUBY_CHESTPLATE;
+    public static RegistryResult<Item> RUBY_LEGGINGS;
+    public static RegistryResult<Item> RUBY_BOOTS;
 
-    public static void Registry()
-    {
+    public static void Registry() {
         //Items
         RUBY = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby"))));
         RUBY_DUST = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_dust"))));

@@ -1,12 +1,12 @@
 {
-	"parent": "block/cube",
-	"textures": {
-		"particle": "rubycraft:block/crushing_machine_leftrightback",
-		"down": "rubycraft:block/crushing_machine_bottom",
-		"up": "rubycraft:block/crushing_machine_top",
-		"north": "rubycraft:block/crushing_machine_front",
-		"east": "rubycraft:block/crushing_machine_leftrightback",
-		"south": "rubycraft:block/crushing_machine_leftrightback",
-		"west": "rubycraft:block/crushing_machine_leftrightback"
-	}
+  "parent": "block/cube",
+  "textures": {
+    "particle": "rubycraft:block/crushing_machine_leftrightback",
+    "down": "rubycraft:block/crushing_machine_bottom",
+    "up": "rubycraft:block/crushing_machine_top",
+    "north": "rubycraft:block/crushing_machine_front",
+    "east": "rubycraft:block/crushing_machine_leftrightback",
+    "south": "rubycraft:block/crushing_machine_leftrightback",
+    "west": "rubycraft:block/crushing_machine_leftrightback"
+  }
 }

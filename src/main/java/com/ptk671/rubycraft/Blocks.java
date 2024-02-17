@@ -37,16 +37,16 @@ public class Blocks {
                 .strength(3.5F, 6.0F)
         ));
 
-       RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
+        RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F)
         ));
 
-      RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
-                .strength(3.0F,6.0F)
+                .strength(3.0F, 6.0F)
         ));
 
         MACHINE_BLOCK = registry.registerBlock(id("machine_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)

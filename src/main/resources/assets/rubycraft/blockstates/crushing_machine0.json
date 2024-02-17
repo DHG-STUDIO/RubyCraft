@@ -1,5 +1,7 @@
 {
-    "variants": {
-      "": { "model": "rubycraft:block/crushing_machine0" }
+  "variants": {
+    "": {
+      "model": "rubycraft:block/crushing_machine0"
     }
   }
+}

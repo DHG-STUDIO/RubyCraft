@@ -1,20 +1,20 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "##",
-        " X",
-        " X"
-    ],
-    "key": {
-        "#": {
-            "tag": "c:ruby_ingots"
-        },
-        "X": {
-            "item": "minecraft:stick"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "##",
+    " X",
+    " X"
+  ],
+  "key": {
+    "#": {
+      "tag": "c:ruby_ingots"
     },
-    "result": {
-        "item": "rubycraft:ruby_hoe",
-        "count": 1
+    "X": {
+      "item": "minecraft:stick"
     }
+  },
+  "result": {
+    "item": "rubycraft:ruby_hoe",
+    "count": 1
+  }
 }

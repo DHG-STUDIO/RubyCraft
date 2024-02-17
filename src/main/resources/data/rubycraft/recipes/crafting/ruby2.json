@@ -1,17 +1,17 @@
 {
-    "type": "minecraft:crafting_shaped",
-    "pattern": [
-        "###",
-        "###",
-        "###"
-    ],
-    "key": {
-        "#": {
-            "item": "rubycraft:ruby_nugget"
-        }
-    },
-    "result": {
-        "item": "rubycraft:ruby",
-        "count": 1
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "rubycraft:ruby_nugget"
     }
+  },
+  "result": {
+    "item": "rubycraft:ruby",
+    "count": 1
+  }
 }

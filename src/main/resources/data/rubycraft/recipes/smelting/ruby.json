@@ -1,9 +1,9 @@
 {
-    "type": "minecraft:smelting",
-    "ingredient": {
-        "tag": "c:ruby_ores"
-    },
-    "result": "rubycraft:ruby",
-    "experience": 0.3,
-    "cookingtime": 200
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "tag": "c:ruby_ores"
+  },
+  "result": "rubycraft:ruby",
+  "experience": 0.3,
+  "cookingtime": 200
 }

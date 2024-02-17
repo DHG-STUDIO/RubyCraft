@@ -9,8 +9,6 @@ public class RubyCraftClient implements ClientModInitializer {
      */
 
 
-
-
     @Override
     public void onInitializeClient() {
 

@@ -1,6 +1,6 @@
 {
-    "replace": false,
-    "values": [
-      "rubycraft:ruby_ore"
-    ]
-  }
+  "replace": false,
+  "values": [
+    "rubycraft:ruby_ore"
+  ]
+}

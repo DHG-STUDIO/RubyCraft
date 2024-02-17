@@ -12,14 +12,14 @@ import java.util.Map;
 
 public class RubyArmorMaterial implements CompatibleArmorMaterial {
     private final Map<ArmorEquipmentType, int[]> ARMOR_SETTINGS = new HashMap<>();
+    private final int[] PROTECTION_VALUES = new int[]{4, 7, 6, 4};
 
     public RubyArmorMaterial() {
-        ARMOR_SETTINGS.put(ArmorEquipmentType.HEAD, new int[] { 13, 4 });
-        ARMOR_SETTINGS.put(ArmorEquipmentType.CHEST, new int[] { 15, 7 });
-        ARMOR_SETTINGS.put(ArmorEquipmentType.LEGS, new int[] { 16, 6 });
-        ARMOR_SETTINGS.put(ArmorEquipmentType.FEET, new int[] { 11, 4 });
+        ARMOR_SETTINGS.put(ArmorEquipmentType.HEAD, new int[]{13, 4});
+        ARMOR_SETTINGS.put(ArmorEquipmentType.CHEST, new int[]{15, 7});
+        ARMOR_SETTINGS.put(ArmorEquipmentType.LEGS, new int[]{16, 6});
+        ARMOR_SETTINGS.put(ArmorEquipmentType.FEET, new int[]{11, 4});
     }
-    private final int[] PROTECTION_VALUES = new int[] { 4, 7, 6, 4 };
 
     @Override
     public int getDurability(ArmorEquipmentType type) {

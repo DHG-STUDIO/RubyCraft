@@ -1,15 +1,15 @@
 {
-    "type": "techreborn:grinder",
-    "power": 2,
-    "time": 150,
-    "ingredients": [
-      {
-        "item": "rubycraft:ruby"
-      }
-    ],
-    "results": [
-      {
-        "item": "rubycraft:ruby_dust"
-      }
-    ]
-  }
+  "type": "techreborn:grinder",
+  "power": 2,
+  "time": 150,
+  "ingredients": [
+    {
+      "item": "rubycraft:ruby"
+    }
+  ],
+  "results": [
+    {
+      "item": "rubycraft:ruby_dust"
+    }
+  ]
+}
