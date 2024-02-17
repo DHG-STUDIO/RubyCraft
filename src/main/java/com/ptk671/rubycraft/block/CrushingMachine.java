@@ -39,6 +39,12 @@ public class CrushingMachine extends Block {
             return ActionResult.SUCCESS;
         }
 
+        if (ItemUtil.isIn(handStack, (TagKey<Item>) TagKey.create(TagKey.Type.ITEM, new Identifier("c:ruby_blocks")))) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 9));
+            return ActionResult.SUCCESS;
+        }
+
         if (handStack.getItem() instanceof RubyIngot) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(RUBY_DUST.get(), 1));
