@@ -31,18 +31,18 @@ public class OreRegistry {
             return;
         }
 
-        ConfiguredFeature<?, ?> RUBY_ORE_CONFIGURED_FUTURE = Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, id("ruby_ore_overworld"), new ConfiguredFeature<>(
+        ConfiguredFeature<?, ?> rubyOreConfigure = Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, id("ruby_ore_overworld"), new ConfiguredFeature<>(
                 Feature.ORE, new OreFeatureConfig(
                 OreConfiguredFeatures.STONE_ORE_REPLACEABLES,
                 Blocks.RUBY_ORE.get().getDefaultState(),
                 9
         )));
 
-        PlacedFeature RUBY_ORE_PLACED_FEATURE = Registry.register(BuiltinRegistries.PLACED_FEATURE, id("ruby_ore_overworld"), new PlacedFeature(
-                RegistryEntry.of(RUBY_ORE_CONFIGURED_FUTURE),
+        PlacedFeature rubyOrePlacer = Registry.register(BuiltinRegistries.PLACED_FEATURE, id("ruby_ore_overworld"), new PlacedFeature(
+                RegistryEntry.of(rubyOreConfigure),
                 RUBY_ORE_PLACEMENT_MODIFIERS
         ));
 
-        BiomeModifications.replaceProperties((ctx, mutable) -> mutable.getGenerationProperties().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, RegistryEntry.of(RUBY_ORE_PLACED_FEATURE)));
+        BiomeModifications.replaceProperties((ctx, mutable) -> mutable.getGenerationProperties().addFeature(GenerationStep.Feature.UNDERGROUND_ORES, RegistryEntry.of(rubyOrePlacer)));
     }
 }
