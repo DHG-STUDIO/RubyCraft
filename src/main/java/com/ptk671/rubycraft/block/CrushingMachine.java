@@ -13,7 +13,6 @@ import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.tag.TagKey;
 import net.pitan76.mcpitanlib.api.util.*;
 
-import static com.ptk671.rubycraft.BlockItems.RUBY_ORE_ITEM;
 import static com.ptk671.rubycraft.Items.*;
 
 public class CrushingMachine extends Block {
@@ -25,7 +24,7 @@ public class CrushingMachine extends Block {
     }
 
     @Override
-    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+    public ActionResult  onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)  {
         if (world.isClient) {
             return ActionResult.SUCCESS;
         }
@@ -51,7 +50,7 @@ public class CrushingMachine extends Block {
             return ActionResult.SUCCESS;
         }
 
-        if (handStack.getItem() == RUBY_ORE_ITEM.get()) {
+        if (ItemUtil.isIn(handStack, (TagKey<Item>) TagKey.create(TagKey.Type.ITEM, new Identifier("c:ruby_ores")))) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(RUBY_DUST.get(), 3));
             return ActionResult.SUCCESS;
@@ -85,10 +84,34 @@ public class CrushingMachine extends Block {
             return ActionResult.SUCCESS;
         }
 
-        if (handStack.getItem() == RUBY_HOE.get()) {
+        if (handStack.getItem() == RUBY_HELMET.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
-            player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_2));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 5));
+            return ActionResult.SUCCESS;
+        }
+
+        if (handStack.getItem() == RUBY_CHESTPLATE.get()) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 8));
+            return ActionResult.SUCCESS;
+        }
+
+
+        if (handStack.getItem() == RUBY_LEGGINGS.get()) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 7));
+            return ActionResult.SUCCESS;
+        }
+
+        if (handStack.getItem() == RUBY_BOOTS.get()) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 4));
+            return ActionResult.SUCCESS;
+        }
+
+        if (handStack.getItem() == RUBY_GEAR.get()) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 4));
             return ActionResult.SUCCESS;
         }
 
@@ -107,6 +130,25 @@ public class CrushingMachine extends Block {
         if (handStack.getItem() == Items.STICK) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(SAW_DUST.get(), 4));
+            return ActionResult.SUCCESS;
+        }
+
+        if (ItemUtil.isIn(handStack, (TagKey<Item>) TagKey.create(TagKey.Type.ITEM, new Identifier("minecraft:redstone_ores")))) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(Items.REDSTONE, 3));
+            return ActionResult.SUCCESS;
+        }
+
+        if (handStack.getItem() == Items.REDSTONE_BLOCK) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(Items.REDSTONE, 9));
+            return ActionResult.SUCCESS;
+        }
+
+        if (handStack.getItem() == Items.REDSTONE_TORCH) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(Items.REDSTONE, 1));
+            player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_1));
             return ActionResult.SUCCESS;
         }
 
