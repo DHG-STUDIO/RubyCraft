@@ -2,6 +2,7 @@ package com.ptk671.rubycraft;
 
 import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
+import com.ptk671.rubycraft.world.OreRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
 import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
@@ -30,6 +31,9 @@ public class RubyCraft implements ModInitializer {
 
         //ブロック登録
         Blocks.registry();
+
+        //鉱石の追加
+        OreRegistry.register();
 
         // ブロックエンティティの登録
         BlockEntities.register();
