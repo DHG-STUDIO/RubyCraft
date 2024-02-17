@@ -17,21 +17,25 @@ public class RubyCraft implements ModInitializer {
         return new Identifier(RubyCraft.MOD_ID, patch);
     }
 
-
     @Override
     public void onInitialize() {
         //クリエイティブタブの登録
         CreativeTabs.register();
 
+        // コンテナの登録
+        ScreenHandlers.register();
+
         //アイテム登録
-        Items.Registry();
+        Items.registry();
 
         //ブロック登録
-        Blocks.Registry();
+        Blocks.registry();
+
+        // ブロックエンティティの登録
+        BlockEntities.register();
 
         //燃料の登録
         Fuels.register();
-
 
         registry.allRegister();
     }

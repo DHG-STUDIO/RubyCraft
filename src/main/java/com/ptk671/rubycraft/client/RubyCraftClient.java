@@ -1,17 +1,19 @@
 package com.ptk671.rubycraft.client;
 
+import com.ptk671.rubycraft.client.renderer.BlockEntityRenderers;
 import net.fabricmc.api.ClientModInitializer;
 
 
 public class RubyCraftClient implements ClientModInitializer {
-    /**
-     * Runs the mod initializer on the client environment.
-     */
-
-
     @Override
     public void onInitializeClient() {
+        // スクリーンの登録
+        Screens.register();
 
+        // テクスチャの登録
+        Textures.register();
 
+        // レンダラーの登録
+        BlockEntityRenderers.register();
     }
 }

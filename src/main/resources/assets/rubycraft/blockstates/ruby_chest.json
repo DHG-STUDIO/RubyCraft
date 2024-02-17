@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "rubycraft:block/ruby_chest"
+    },
+    "facing=east": {
+      "model": "rubycraft:block/ruby_chest",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "rubycraft:block/ruby_chest",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "rubycraft:block/ruby_chest",
+      "y": 270
+    }
+  }
+}

@@ -23,7 +23,7 @@ public class Blocks {
     public static RegistryResult<Block> CRUSHING_MACHINE;
 
 
-    public static void Registry() {
+    public static void registry() {
 
         RUBY_BLOCK = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()

@@ -42,7 +42,7 @@ public class Items {
     public static RegistryResult<Item> RUBY_LEGGINGS;
     public static RegistryResult<Item> RUBY_BOOTS;
 
-    public static void Registry() {
+    public static void registry() {
         //Items
         RUBY = registry.registerItem(id("ruby"), () -> new Ruby(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby"))));
         RUBY_DUST = registry.registerItem(id("ruby_dust"), () -> new RubyDust(new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_dust"))));

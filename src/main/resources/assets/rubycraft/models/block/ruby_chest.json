@@ -1,7 +1,7 @@
 {
   "parent": "rubycraft:block/chest_template",
   "textures": {
-    "0": "rubycraft:entitie/chest/ruby_chest",
+    "0": "rubycraft:model/ruby_chest",
     "particle": "rubycraft:block/polished_ruby_block"
   }
 }
