@@ -28,6 +28,7 @@ public class Items {
     public static RegistryResult<Item> RUBY_GEAR;
     public static RegistryResult<Item> SAW_DUST;
 
+
     // en: Tools , ja: ツール
     public static RegistryResult<Item> RUBY_SWORD;
     public static RegistryResult <Item> RUBY_AXE;

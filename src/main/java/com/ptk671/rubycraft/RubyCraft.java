@@ -1,5 +1,4 @@
 package com.ptk671.rubycraft;
-
 import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import net.fabricmc.api.ModInitializer;
@@ -32,6 +31,7 @@ public class RubyCraft implements ModInitializer {
 
         //燃料の登録
         Fuels.register();
+
 
         registry.allRegister();
     }
