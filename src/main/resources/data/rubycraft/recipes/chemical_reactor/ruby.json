@@ -1,0 +1,20 @@
+{
+	"type": "techreborn:chemical_reactor",
+	"power": 50,
+	"time": 300,
+	"ingredients": [
+		{
+			"item": "minecraft:redstone",
+			"count": 32
+		},
+		{
+			"item": "minecraft:emerald"
+		}
+	],
+	"results": [
+		{
+			"item": "rubycraft:ruby",
+			"count": 2
+		}
+	]
+}
