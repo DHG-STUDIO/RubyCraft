@@ -3,6 +3,7 @@ package com.ptk671.rubycraft;
 import com.ptk671.rubycraft.block.CrushingMachine;
 import com.ptk671.rubycraft.block.RubyChest;
 import com.ptk671.rubycraft.block.RubyOre;
+import com.ptk671.rubycraft.block.RubyStorage;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
@@ -21,7 +22,7 @@ public class Blocks {
     public static RegistryResult<Block> RUBY_CHEST;
     public static RegistryResult<Block> MACHINE_BLOCK;
     public static RegistryResult<Block> CRUSHING_MACHINE;
-
+    public static RegistryResult<Block> RUBY_STORAGE;
 
     public static void registry() {
 
@@ -59,6 +60,18 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)
         ));
+
+        RUBY_STORAGE = registry.registerBlock(id("ruby_storage"), () -> new RubyStorage(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+                .requiresTool()
+                .sounds(BlockSoundGroup.STONE)
+                .strength(3.6F, 6.0F)
+                .nonOpaque()
+
+
+        ));
+
+
+
 
 
         //ブロックアイテムの登録////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,12 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "rubycraft:block/ruby_storage"
+    "particle": "minecraft:block/glass",
+    "down": "rubycraft:block/ruby_storage_down",
+    "up": "rubycraft:block/ruby_storage_top",
+    "north": "minecraft:block/glass",
+    "east": "minecraft:block/glass",
+    "south": "minecraft:block/glass",
+    "west": "minecraft:block/glass"
   }
 }

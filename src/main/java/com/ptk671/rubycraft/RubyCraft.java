@@ -1,5 +1,6 @@
 package com.ptk671.rubycraft;
 
+import com.ptk671.rubycraft.block.RegistrySetCutouLayer;
 import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import com.ptk671.rubycraft.world.OreRegistry;
@@ -40,6 +41,9 @@ public class RubyCraft implements ModInitializer {
 
         //燃料の登録
         Fuels.register();
+
+        //ブロックの透過
+        RegistrySetCutouLayer.registry();
 
         registry.allRegister();
     }

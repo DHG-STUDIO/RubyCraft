@@ -17,7 +17,7 @@ public class BlockItems {
     public static RegistryResult<Item> RUBY_CHEST_ITEM;
     public static RegistryResult<Item> MACHINE_BLOCK_ITEM;
     public static RegistryResult<Item> CRUSHING_MACHINE_ITEM;
-
+    public static RegistryResult<Item> RUBY_STORAGE_ITEM;
     public static void register() {
         RUBY_BLOCK_ITEM = registry.registerItem(id("ruby_block"), () -> ItemUtil.ofBlock(Blocks.RUBY_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_block"))));
         POLISHED_RUBY_BLOCK_ITEM = registry.registerItem(id("polished_ruby_block"), () -> ItemUtil.ofBlock(Blocks.POLISHED_RUBY_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("polished_ruby_block"))));
@@ -25,5 +25,6 @@ public class BlockItems {
         RUBY_CHEST_ITEM = registry.registerItem(id("ruby_chest"), () -> ItemUtil.ofBlock(Blocks.RUBY_CHEST.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_chest"))));
         MACHINE_BLOCK_ITEM = registry.registerItem(id("machine_block"), () -> ItemUtil.ofBlock(Blocks.MACHINE_BLOCK.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("machine_block"))));
         CRUSHING_MACHINE_ITEM = registry.registerItem(id("crushing_machine"), () -> ItemUtil.ofBlock(Blocks.CRUSHING_MACHINE.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("crushing_machine"))));
+        RUBY_STORAGE_ITEM = registry.registerItem(id("ruby_storage"), () -> ItemUtil.ofBlock(Blocks.RUBY_STORAGE.get(), new CompatibleItemSettings().addGroup(() -> RUBY_CRAFT_CREATIVE_TAB, id("ruby_storage"))));
     }
 }
