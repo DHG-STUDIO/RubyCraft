@@ -1,20 +1,26 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    " # ",
-    "#X#",
-    " # "
-  ],
-  "key": {
-    "#": {
-      "tag": "c:ruby_ingots"
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#H#",
+        "GRG",
+        "#H#"
+    ],
+    "key": {
+        "#": {
+            "item": "rubycraft:polished_ruby_block"
+        },
+        "H": {
+            "item": "minecraft:hopper"
+        },
+        "G": {
+            "item": "minecraft:glass"
+        },
+        "R": {
+            "item": "rubycraft:ruby_chest"
+        }
     },
-    "X": {
-      "item": "minecraft:chest"
+    "result": {
+        "item": "rubycraft:ruby_storage",
+        "count": 1
     }
-  },
-  "result": {
-    "item": "rubycraft:ruby_storage",
-    "count": 1
-  }
 }
