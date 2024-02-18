@@ -13,7 +13,7 @@
             "item": "minecraft:hopper"
         },
         "G": {
-            "item": "minecraft:glass"
+            "tag": "c:glass_blocks"
         },
         "R": {
             "item": "rubycraft:ruby_chest"
