@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "rubycraft",
-  "version": "0.3.1 (testbuild20240217)",
+  "version": "${version}",
   "name": "RubyCraft",
   "_comment": "This is small mod for industry and magic",
   "description": "This is mod that add ruby related things",
