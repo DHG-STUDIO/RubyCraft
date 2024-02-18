@@ -16,9 +16,8 @@ public class RubyStorage extends ExtendBlock {
         super(settings);
     }
 
-
     @Override
     public VoxelShape getCollisionShape(CollisionShapeEvent event) {
-        return SHAPE;
+        return VoxelShapes.union(VoxelShapes.fullCube(), SHAPE);
     }
 }
