@@ -25,7 +25,7 @@ public class RubyToolMaterial implements CompatibleToolMaterial {
 
     //採掘レベル
     @Override
-    public int getMiningLevel() {
+    public int getCompatMiningLevel() {
         return 3;
     }
     //エンチャント耐性
