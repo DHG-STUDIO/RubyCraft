@@ -20,7 +20,7 @@ public class Blocks {
     public static RegistryResult<Block> MACHINE_BLOCK;
     public static RegistryResult<Block> CRUSHING_MACHINE;
     public static RegistryResult<Block> RUBY_STORAGE;
-    public static RegistryResult<Block> RUBY_STORAGE_MK_2;
+    public static RegistryResult<Block> RUBY_STORAGE_MK2;
 
     public static void registry() {
 
@@ -53,6 +53,7 @@ public class Blocks {
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.5F, 6.0F)
         ));
+
         CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine0"), () -> new CrushingMachine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
@@ -64,22 +65,14 @@ public class Blocks {
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
                 .nonOpaque()
-
-
         ));
 
-        RUBY_STORAGE_MK_2 = registry.registerBlock(id("ruby_storage_mk_2"), () -> new RubyStorageMk2(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_STORAGE_MK2 = registry.registerBlock(id("ruby_storage_mk2"), () -> new RubyStorageMk2(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
                 .nonOpaque()
-
-
         ));
-
-
-
-
 
         //ブロックアイテムの登録////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         BlockItems.register();
