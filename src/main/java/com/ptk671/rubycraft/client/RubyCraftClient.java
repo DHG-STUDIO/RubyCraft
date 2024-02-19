@@ -17,7 +17,7 @@ public class RubyCraftClient implements ClientModInitializer {
         Textures.register();
 
         //ブロックの透過
-        RegistrySetCutoutLayer.register();
+        BlockRenderLayers.register();
 
         // レンダラーの登録
         BlockEntityRenderers.register();
