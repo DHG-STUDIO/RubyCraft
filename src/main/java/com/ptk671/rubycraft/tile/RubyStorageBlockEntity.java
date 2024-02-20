@@ -2,19 +2,21 @@ package com.ptk671.rubycraft.tile;
 
 import com.ptk671.rubycraft.BlockEntities;
 import com.ptk671.rubycraft.block.RubyStorage;
+import net.minecraft.block.Block;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.Inventories;
 import net.minecraft.inventory.SidedInventory;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
 import net.pitan76.mcpitanlib.api.event.block.TileCreateEvent;
+import net.pitan76.mcpitanlib.api.gui.inventory.IInventory;
+import net.pitan76.mcpitanlib.api.packet.UpdatePacketType;
 import net.pitan76.mcpitanlib.api.tile.ExtendBlockEntity;
 import org.jetbrains.annotations.Nullable;
 
-public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedInventory {
+public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedInventory, IInventory {
     private final DefaultedList<ItemStack> items;
     public RubyStorageBlockEntity(TileCreateEvent event) {
         super(BlockEntities.RUBY_STORAGE.getOrNull(), event);
@@ -38,48 +40,36 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     }
 
     @Override
+    public UpdatePacketType getUpdatePacketType() {
+        return UpdatePacketType.BLOCK_ENTITY_UPDATE_S2C;
+    }
+
+    @Override
+    public NbtCompound toInitialChunkDataNbt() {
+        NbtCompound nbt = super.toInitialChunkDataNbt();
+        writeNbtOverride(nbt);
+
+        return nbt;
+    }
+
+    @Override
     public int[] getAvailableSlots(Direction side) {
-        return new int[0];
+        return items.stream().filter(ItemStack::isEmpty).mapToInt(items::indexOf).toArray();
     }
 
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
-        return false;
+        return dir == Direction.UP && items.get(slot).isEmpty();
     }
 
     @Override
     public boolean canExtract(int slot, ItemStack stack, Direction dir) {
-        return false;
+        return dir == Direction.DOWN && !items.get(slot).isEmpty();
     }
 
     @Override
-    public int size() {
-        return 0;
-    }
-
-    @Override
-    public boolean isEmpty() {
-        return false;
-    }
-
-    @Override
-    public ItemStack getStack(int slot) {
-        return new ItemStack(Items.REDSTONE, 1);
-    }
-
-    @Override
-    public ItemStack removeStack(int slot, int amount) {
-        return null;
-    }
-
-    @Override
-    public ItemStack removeStack(int slot) {
-        return null;
-    }
-
-    @Override
-    public void setStack(int slot, ItemStack stack) {
-
+    public DefaultedList<ItemStack> getItems() {
+        return items;
     }
 
     @Override
@@ -88,7 +78,9 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     }
 
     @Override
-    public void clear() {
-        items.clear();
+    public void markDirty() {
+        super.markDirty();
+
+        world.getMinecraftWorld().updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
     }
 }
