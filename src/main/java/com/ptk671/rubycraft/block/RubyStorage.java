@@ -5,7 +5,10 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.entity.ItemEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.nbt.NbtCompound;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.DirectionProperty;
 import net.minecraft.state.property.Properties;
@@ -15,11 +18,14 @@ import net.minecraft.util.shape.VoxelShapes;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.block.ExtendBlockEntityProvider;
+import net.pitan76.mcpitanlib.api.block.ExtendBlockProvider;
+import net.pitan76.mcpitanlib.api.event.block.BlockBreakEvent;
 import net.pitan76.mcpitanlib.api.event.block.CollisionShapeEvent;
+import net.pitan76.mcpitanlib.api.event.block.result.BlockBreakResult;
 import org.jetbrains.annotations.Nullable;
 
 
-public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvider {
+public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvider, ExtendBlockProvider {
     private VoxelShape SHAPE_BOTTOM = VoxelShapes.cuboid(0.0, 0.1, 0.0, 0, 0.2, 0);
     private VoxelShape SHAPE_TOP = VoxelShapes.cuboid(0.0, 15.8, 0.0, 15.9, 15.9, 15.9);
     private VoxelShape SHAPE = VoxelShapes.union(SHAPE_BOTTOM, SHAPE_TOP);
@@ -53,5 +59,30 @@ public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvide
     @Override
     protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
+    }
+
+    @Override
+    public BlockBreakResult onBreak(BlockBreakEvent event, Options options) {
+        if(event.isClient()) {
+            return ExtendBlockProvider.super.onBreak(event, options);
+        }
+
+        BlockEntity blockEntity = event.getWorld().getBlockEntity(event.getPos());
+
+        if(blockEntity == null) {
+            return ExtendBlockProvider.super.onBreak(event, options);
+        }
+
+        NbtCompound nbt = blockEntity.toInitialChunkDataNbt();
+
+        ItemStack stack = new ItemStack(this);
+        stack.setSubNbt("BlockEntityTag", nbt);
+
+        event.getWorld().spawnEntity(new ItemEntity(event.getWorld(), event.getPos().getX(), event.getPos().getY(), event.getPos().getZ(), stack));
+
+        options.cancel = true;
+        event.getWorld().setBlockState(event.getPos(), net.minecraft.block.Blocks.AIR.getDefaultState());
+
+        return new BlockBreakResult(event.getState());
     }
 }

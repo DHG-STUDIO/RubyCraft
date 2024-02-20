@@ -54,17 +54,23 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
 
     @Override
     public int[] getAvailableSlots(Direction side) {
-        return items.stream().filter(ItemStack::isEmpty).mapToInt(items::indexOf).toArray();
+        int[] availableSlots = new int[items.size()];
+
+        for (int i = 0; i < items.size(); i++) {
+            availableSlots[i] = i;
+        }
+
+        return availableSlots;
     }
 
     @Override
     public boolean canInsert(int slot, ItemStack stack, @Nullable Direction dir) {
-        return dir == Direction.UP && items.get(slot).isEmpty();
+        return dir == Direction.UP;
     }
 
     @Override
     public boolean canExtract(int slot, ItemStack stack, Direction dir) {
-        return dir == Direction.DOWN && !items.get(slot).isEmpty();
+        return dir == Direction.DOWN;
     }
 
     @Override
@@ -81,6 +87,8 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     public void markDirty() {
         super.markDirty();
 
-        world.getMinecraftWorld().updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
+        if (!world.isClient()) {
+            world.getMinecraftWorld().updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
+        }
     }
 }

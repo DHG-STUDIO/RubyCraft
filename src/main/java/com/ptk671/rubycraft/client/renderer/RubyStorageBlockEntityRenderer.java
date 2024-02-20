@@ -8,7 +8,7 @@ import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.math.Direction;
-
+import net.minecraft.util.math.Vec3f;
 
 public class RubyStorageBlockEntityRenderer<T extends RubyStorageBlockEntity> implements BlockEntityRenderer<T> {
 
@@ -16,12 +16,12 @@ public class RubyStorageBlockEntityRenderer<T extends RubyStorageBlockEntity> im
     public void render(RubyStorageBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light, int overlay) {
         matrices.push();
 
-        renderItems(entity, matrices, vertexConsumers, light);
+        renderItems(entity, tickDelta, matrices, vertexConsumers, light);
 
         matrices.pop();
     }
 
-    private void renderItems(RubyStorageBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
+    private void renderItems(RubyStorageBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         matrices.scale(0.5F, 0.5F, 0.5F);
 
         Direction direction = entity.getCachedState().get(RubyStorage.FACING);
@@ -47,6 +47,11 @@ public class RubyStorageBlockEntityRenderer<T extends RubyStorageBlockEntity> im
             double z = 1 + ((Math.floor(currentRenderCount / 3.0) - 1) * Math.abs(direction.getOffsetX())) * 0.5;
 
             matrices.translate(x, y, z);
+
+            //TODO: 三角関数に書き換える
+            float rotation = (360F * (System.currentTimeMillis() % 4000) / 4000) - tickDelta;
+            matrices.multiply(Vec3f.POSITIVE_Y.getDegreesQuaternion(rotation));
+
             RenderUtil.renderItem(stack, entity, matrices, vertexConsumers, light);
 
             matrices.pop();
