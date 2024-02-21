@@ -1,0 +1,22 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "#H#",
+        "###",
+        "#H#"
+    ],
+    "key": {
+        "#": {
+            "item": "rubycraft:polished_ruby_block"
+        },
+        "H": {
+            "item": "rubycraft:ruby_storage"
+        }
+    },
+
+    "result": {
+        "item": "rubycraft:ruby_storage_mk2",
+        "count": 1
+    }
+
+}
