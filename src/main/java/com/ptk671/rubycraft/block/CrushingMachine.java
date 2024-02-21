@@ -84,6 +84,13 @@ public class CrushingMachine extends Block {
             return ActionResult.SUCCESS;
         }
 
+        if (handStack.getItem() == RUBY_HOE.get()) {
+            handStack.setCount(handStack.getCount() - 1);
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
+            player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_2));
+            return ActionResult.SUCCESS;
+        }
+
         if (handStack.getItem() == RUBY_HELMET.get()) {
             handStack.setCount(handStack.getCount() - 1);
             player.giveItemStack(new ItemStack(RUBY_DUST.get(), 5));
