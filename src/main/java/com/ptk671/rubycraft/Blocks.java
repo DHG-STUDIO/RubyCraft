@@ -21,6 +21,7 @@ public class Blocks {
     public static RegistryResult<Block> CRUSHING_MACHINE;
     public static RegistryResult<Block> RUBY_STORAGE;
     public static RegistryResult<Block> RUBY_STORAGE_MK2;
+    public static RegistryResult<Block> RUBY_STORAGE_MK3;
 
     public static void registry() {
 
@@ -68,6 +69,14 @@ public class Blocks {
         ));
 
         RUBY_STORAGE_MK2 = registry.registerBlock(id("ruby_storage_mk2"), () -> new RubyStorageMk2(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+                .requiresTool()
+                .sounds(BlockSoundGroup.STONE)
+                .strength(3.5F, 6.0F)
+                .nonOpaque()
+        ));
+
+
+        RUBY_STORAGE_MK3 = registry.registerBlock(id("ruby_storage_mk3"), () -> new RubyStorageMk3(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
