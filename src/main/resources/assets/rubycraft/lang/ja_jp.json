@@ -35,5 +35,5 @@
 
   "container.rubycraft.ruby_chest": "ルビーチェスト",
 
-  "msg.rubycraft.crushing_machine_error": "§cルビー、ルビーインゴット、ルビー鉱石のどれかを持ちながらルビー粉砕機をクリックしてください。"
+  "msg.rubycraft.crushing_machine_error": "§cルビー、ルビーツール、ルビーアーマー、ルビーインゴット、ルビー鉱石、レッドストーン、木材のどれかを持ちながらルビー粉砕機をクリックしてください。"
 }

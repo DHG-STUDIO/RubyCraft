@@ -35,5 +35,6 @@
 
   "container.rubycraft.ruby_chest": "Ruby Chest",
 
-  "msg.rubycraft.crushing_machine_error": "§cClick on the Ruby Crushing Machine while holding a Ruby, Ruby Ingot, or Ruby Ore."
+
+  "msg.rubycraft.crushing_machine_error": "§cClick on the Ruby Crushing Machine while holding a Ruby, Ruby Ingot,Ruby Tool,Ruby Armor, RedStone, Wood or Ruby Ore."
 }
