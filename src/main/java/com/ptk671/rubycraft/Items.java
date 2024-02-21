@@ -3,17 +3,12 @@ package com.ptk671.rubycraft;
 import com.ptk671.rubycraft.item.*;
 import net.minecraft.item.FoodComponent;
 import net.minecraft.item.Item;
-import net.pitan76.mcpitanlib.api.item.ArmorEquipmentType;
-import net.pitan76.mcpitanlib.api.item.CompatibleArmorItem;
-import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
-import net.pitan76.mcpitanlib.api.item.ExtendItem;
+import net.pitan76.mcpitanlib.api.item.*;
 import net.pitan76.mcpitanlib.api.item.tool.*;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 
-import static com.ptk671.rubycraft.ArmorToolMaterials.ARMOR_MATERIAL;
-import static com.ptk671.rubycraft.ArmorToolMaterials.TOOL_MATERIAL;
-import static com.ptk671.rubycraft.RubyCraft.id;
-import static com.ptk671.rubycraft.RubyCraft.registry;
+import static com.ptk671.rubycraft.ArmorToolMaterials.*;
+import static com.ptk671.rubycraft.RubyCraft.*;
 import static com.ptk671.rubycraft.itemgroup.CreativeTabs.RUBY_CRAFT_CREATIVE_TAB;
 
 public class Items {

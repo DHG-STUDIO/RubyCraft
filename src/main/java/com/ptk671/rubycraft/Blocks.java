@@ -3,9 +3,7 @@ package com.ptk671.rubycraft;
 import com.ptk671.rubycraft.block.*;
 import net.minecraft.block.Block;
 import net.minecraft.sound.BlockSoundGroup;
-import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
-import net.pitan76.mcpitanlib.api.block.CompatibleMaterial;
-import net.pitan76.mcpitanlib.api.block.ExtendBlock;
+import net.pitan76.mcpitanlib.api.block.*;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 
 import static com.ptk671.rubycraft.RubyCraft.id;

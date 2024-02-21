@@ -5,8 +5,7 @@ import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import com.ptk671.rubycraft.world.OreRegistry;
 import net.fabricmc.api.ModInitializer;
 import net.minecraft.util.Identifier;
-import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
-import net.pitan76.mcpitanlib.api.registry.WorldGenRegistry;
+import net.pitan76.mcpitanlib.api.registry.*;
 
 public class RubyCraft implements ModInitializer {
     /**

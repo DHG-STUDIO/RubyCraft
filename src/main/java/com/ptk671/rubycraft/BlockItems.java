@@ -5,8 +5,7 @@ import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 import net.pitan76.mcpitanlib.api.util.ItemUtil;
 
-import static com.ptk671.rubycraft.RubyCraft.id;
-import static com.ptk671.rubycraft.RubyCraft.registry;
+import static com.ptk671.rubycraft.RubyCraft.*;
 import static com.ptk671.rubycraft.itemgroup.CreativeTabs.RUBY_CRAFT_CREATIVE_TAB;
 
 public class BlockItems {

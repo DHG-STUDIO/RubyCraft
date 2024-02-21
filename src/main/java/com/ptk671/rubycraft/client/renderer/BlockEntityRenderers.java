@@ -2,8 +2,8 @@ package com.ptk671.rubycraft.client.renderer;
 
 import com.ptk671.rubycraft.BlockEntities;
 import net.minecraft.client.render.block.entity.BlockEntityRendererFactory;
-import net.pitan76.mcpitanlib.api.client.registry.ArchRegistryClient;
-import net.pitan76.mcpitanlib.api.client.registry.CompatRegistryClient;
+
+import net.pitan76.mcpitanlib.api.client.registry.*;
 
 public class BlockEntityRenderers {
     public static void register() {

@@ -1,7 +1,9 @@
 package com.ptk671.rubycraft;
 
 import com.ptk671.rubycraft.container.RubyChestScreenHandler;
+
 import net.minecraft.screen.ScreenHandlerType;
+
 import net.pitan76.mcpitanlib.api.gui.SimpleScreenHandlerTypeBuilder;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 

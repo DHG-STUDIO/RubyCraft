@@ -1,10 +1,8 @@
 package com.ptk671.rubycraft;
 
-import com.ptk671.rubycraft.tile.RubyChestBlockEntity;
-import com.ptk671.rubycraft.tile.RubyStorageBlockEntity;
-import net.minecraft.block.Block;
-import net.minecraft.block.entity.BlockEntity;
-import net.minecraft.block.entity.BlockEntityType;
+import com.ptk671.rubycraft.tile.*;
+import net.minecraft.block.*;
+import net.minecraft.block.entity.*;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 import net.pitan76.mcpitanlib.api.tile.BlockEntityTypeBuilder;
 

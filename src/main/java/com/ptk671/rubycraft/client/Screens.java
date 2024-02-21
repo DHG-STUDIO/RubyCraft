@@ -2,8 +2,9 @@ package com.ptk671.rubycraft.client;
 
 import com.ptk671.rubycraft.ScreenHandlers;
 import com.ptk671.rubycraft.client.screen.RubyChestScreen;
-import net.fabricmc.api.EnvType;
-import net.fabricmc.api.Environment;
+
+import net.fabricmc.api.*;
+
 import net.pitan76.mcpitanlib.api.client.registry.ArchRegistryClient;
 
 public class Screens {
