@@ -46,5 +46,3 @@ public class RubyCraft implements ModInitializer {
     }
 
 }
-
-
