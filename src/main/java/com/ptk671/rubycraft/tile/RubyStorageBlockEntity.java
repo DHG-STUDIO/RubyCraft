@@ -11,13 +11,16 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
 import net.pitan76.mcpitanlib.api.event.block.TileCreateEvent;
+import net.pitan76.mcpitanlib.api.event.tile.TileTickEvent;
 import net.pitan76.mcpitanlib.api.gui.inventory.IInventory;
 import net.pitan76.mcpitanlib.api.packet.UpdatePacketType;
 import net.pitan76.mcpitanlib.api.tile.ExtendBlockEntity;
+import net.pitan76.mcpitanlib.api.tile.ExtendBlockEntityTicker;
 import org.jetbrains.annotations.Nullable;
 
-public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedInventory, IInventory {
+public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedInventory, IInventory, ExtendBlockEntityTicker<RubyStorageBlockEntity> {
     private final DefaultedList<ItemStack> items;
+
     public RubyStorageBlockEntity(TileCreateEvent event) {
         super(BlockEntities.RUBY_STORAGE.getOrNull(), event);
 
@@ -29,6 +32,7 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     public void readNbtOverride(NbtCompound nbt) {
         super.readNbtOverride(nbt);
 
+        items.clear();
         Inventories.readNbt(nbt, items);
     }
 
@@ -89,6 +93,13 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
 
         if (!world.isClient()) {
             world.getMinecraftWorld().updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
+        }
+    }
+
+    @Override
+    public void tick(TileTickEvent<RubyStorageBlockEntity> event) {
+        if (event.world.getTime() % 40L == 0L && !isEmpty()) {
+            event.world.updateListeners(pos, getCachedState(), getCachedState(), Block.NOTIFY_LISTENERS);
         }
     }
 }

@@ -7,6 +7,7 @@ import net.minecraft.client.render.VertexConsumerProvider;
 import net.minecraft.client.render.block.entity.BlockEntityRenderer;
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.item.ItemStack;
+import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3f;
 
@@ -28,9 +29,9 @@ public class RubyStorageBlockEntityRenderer<T extends RubyStorageBlockEntity> im
 
         int currentRenderCount = 0;
 
-        for (int i = 0; i < entity.size(); i++) {
-            ItemStack stack = entity.getStack(i);
+        DefaultedList<ItemStack> items = entity.getItems();
 
+        for (ItemStack stack : items) {
             if(currentRenderCount >= 9) {
                 break;
             }

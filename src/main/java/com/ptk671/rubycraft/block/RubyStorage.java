@@ -85,4 +85,9 @@ public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvide
 
         return new BlockBreakResult(event.getState());
     }
+
+    @Override
+    public boolean isTick() {
+        return true;
+    }
 }
