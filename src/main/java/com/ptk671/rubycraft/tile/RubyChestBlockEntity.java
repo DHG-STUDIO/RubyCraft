@@ -2,12 +2,11 @@ package com.ptk671.rubycraft.tile;
 
 import com.ptk671.rubycraft.BlockEntities;
 import com.ptk671.rubycraft.container.RubyChestScreenHandler;
-
-import net.minecraft.block.entity.*;
+import net.minecraft.block.entity.BlockEntityType;
+import net.minecraft.block.entity.ChestBlockEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.screen.ScreenHandler;
 import net.minecraft.text.Text;
-
 import net.pitan76.mcpitanlib.api.event.block.TileCreateEvent;
 import net.pitan76.mcpitanlib.api.util.TextUtil;
 

@@ -1,28 +1,34 @@
 package com.ptk671.rubycraft.block;
 
 import com.ptk671.rubycraft.BlockEntities;
-
-import net.minecraft.block.*;
-import net.minecraft.block.entity.*;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
+import net.minecraft.block.entity.BlockEntity;
+import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
 import net.minecraft.state.StateManager;
-import net.minecraft.state.property.*;
+import net.minecraft.state.property.DirectionProperty;
+import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.shape.*;
-
-import net.pitan76.mcpitanlib.api.block.*;
-import net.pitan76.mcpitanlib.api.event.block.*;
+import net.minecraft.util.shape.VoxelShape;
+import net.minecraft.util.shape.VoxelShapes;
+import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
+import net.pitan76.mcpitanlib.api.block.ExtendBlock;
+import net.pitan76.mcpitanlib.api.block.ExtendBlockEntityProvider;
+import net.pitan76.mcpitanlib.api.block.ExtendBlockProvider;
+import net.pitan76.mcpitanlib.api.event.block.BlockBreakEvent;
+import net.pitan76.mcpitanlib.api.event.block.CollisionShapeEvent;
 import net.pitan76.mcpitanlib.api.event.block.result.BlockBreakResult;
-
 import org.jetbrains.annotations.Nullable;
 
 
 public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvider, ExtendBlockProvider {
-    private VoxelShape SHAPE_BOTTOM = VoxelShapes.cuboid(0.0, 0.1, 0.0, 0, 0.2, 0);
-    private VoxelShape SHAPE_TOP = VoxelShapes.cuboid(0.0, 15.8, 0.0, 15.9, 15.9, 15.9);
-    private VoxelShape SHAPE = VoxelShapes.union(SHAPE_BOTTOM, SHAPE_TOP);
+    private final VoxelShape SHAPE_BOTTOM = VoxelShapes.cuboid(0.0, 0.1, 0.0, 0, 0.2, 0);
+    private final VoxelShape SHAPE_TOP = VoxelShapes.cuboid(0.0, 15.8, 0.0, 15.9, 15.9, 15.9);
+    private final VoxelShape SHAPE = VoxelShapes.union(SHAPE_BOTTOM, SHAPE_TOP);
 
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 

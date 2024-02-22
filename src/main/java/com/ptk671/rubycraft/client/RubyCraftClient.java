@@ -1,7 +1,6 @@
 package com.ptk671.rubycraft.client;
 
 import com.ptk671.rubycraft.client.renderer.BlockEntityRenderers;
-
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;

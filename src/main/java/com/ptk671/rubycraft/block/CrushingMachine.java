@@ -1,19 +1,23 @@
 package com.ptk671.rubycraft.block;
 
-import com.ptk671.rubycraft.item.*;
-
-import net.minecraft.block.*;
+import com.ptk671.rubycraft.item.RubyIngot;
+import net.minecraft.block.Block;
+import net.minecraft.block.BlockState;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.*;
+import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.tag.ItemTags;
-import net.minecraft.util.*;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.Identifier;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.World;
-
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.tag.TagKey;
-import net.pitan76.mcpitanlib.api.util.*;
+import net.pitan76.mcpitanlib.api.util.ItemUtil;
+import net.pitan76.mcpitanlib.api.util.TextUtil;
 
 import static com.ptk671.rubycraft.Items.*;
 

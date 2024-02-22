@@ -7,19 +7,19 @@ import net.pitan76.mcpitanlib.api.item.tool.CompatibleToolMaterial;
 public class RubyToolMaterial implements CompatibleToolMaterial {
     //耐久値
     @Override
-    public int getDurability() {
+    public int getCompatDurability() {
         return 1250;
     }
 
     //採掘速度
     @Override
-    public float getMiningSpeedMultiplier() {
+    public float getCompatMiningSpeedMultiplier() {
         return 8.5F;
     }
 
     //攻撃力
     @Override
-    public float getAttackDamage() {
+    public float getCompatAttackDamage() {
         return 5F;
     }
 
@@ -31,13 +31,13 @@ public class RubyToolMaterial implements CompatibleToolMaterial {
     //エンチャント耐性
 
     @Override
-    public int getEnchantability() {
+    public int getCompatEnchantability() {
         return 10;
     }
 
     //金床で修理する時に使うアイテム
     @Override
-    public Ingredient getRepairIngredient() {
+    public Ingredient getCompatRepairIngredient() {
         return Ingredient.ofItems(() -> Items.RUBY_INGOT.getOrNull());
     }
 }
