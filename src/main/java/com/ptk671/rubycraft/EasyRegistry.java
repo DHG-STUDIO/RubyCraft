@@ -1,4 +1,4 @@
-package com.ptk671.rubycraft.item;
+package com.ptk671.rubycraft;
 
 import net.minecraft.item.Item;
 import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
@@ -9,9 +9,9 @@ import static com.ptk671.rubycraft.RubyCraft.id;
 import static com.ptk671.rubycraft.RubyCraft.registry;
 import static com.ptk671.rubycraft.itemgroup.CreativeTabs.RUBY_CRAFT_CREATIVE_TAB;
 
-public class EasyAdditem {
-    public static void itemRegistry(RegistryResult<Item>item , String itemid)
+public class EasyRegistry {
+    public static void easyItem(RegistryResult<Item> item , String itemid)
     {
-      item = registry.registerItem(id(itemid), () -> new ExtendItem(new CompatibleItemSettings().addGroup(RUBY_CRAFT_CREATIVE_TAB)));
+        item = registry.registerItem(id(itemid), () -> new ExtendItem(new CompatibleItemSettings().addGroup(RUBY_CRAFT_CREATIVE_TAB)));
     }
 }
