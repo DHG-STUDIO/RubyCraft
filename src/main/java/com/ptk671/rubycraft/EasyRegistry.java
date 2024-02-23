@@ -1,21 +1,21 @@
 package com.ptk671.rubycraft;
 
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.minecraft.block.Block;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.item.Item;
 
-import net.minecraft.item.ItemStack;
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.item.CompatibleItemSettings;
 import net.pitan76.mcpitanlib.api.item.CreativeTabBuilder;
-import net.pitan76.mcpitanlib.api.item.CreativeTabManager;
 import net.pitan76.mcpitanlib.api.item.ExtendItem;
 import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 import net.pitan76.mcpitanlib.api.util.ItemUtil;
 
-import static com.ptk671.rubycraft.RubyCraft.*;
-import static com.ptk671.rubycraft.RubyCraft.registry;
+import static com.ptk671.rubycraft.RubyCraft.MOD_ID;
+import static com.ptk671.rubycraft.RubyCraft.id;
 
 public class EasyRegistry {
     public static CompatRegistry registry = CompatRegistry.createRegistry(MOD_ID);
@@ -32,7 +32,6 @@ public class EasyRegistry {
         return block;
     }
 
-
     //Easy BlockItem
     public static RegistryResult<Item> easyBlockItem(Block block,String itemid,CreativeTabBuilder tab)
     {
@@ -41,11 +40,16 @@ public class EasyRegistry {
     }
 
     //Easy Creative tab
-   /* public static CreativeTabBuilder easyCreativeTab(String tabid, Item item)
+    public static CreativeTabBuilder easyCreativeTab(String tabid)
     {
-CreativeTabBuilder creativeTabBuilder = CreativeTabBuilder.create(id(tabid)
-).setIcon(() -> new ItemStack(item));
-        registry.registerItemGroup(creativeTabBuilder.getIdentifier(), creativeTabBuilder);
-        return creativeTabBuilder;
-    }*/
+CreativeTabBuilder creativeTab = CreativeTabBuilder.create(id(tabid));
+        registry.registerItemGroup(creativeTab.getIdentifier(), creativeTab);
+        return creativeTab;
+    }
+
+    //Easy Block Render Layers
+    public static void easyBlockRenderLayers(Block block)
+    {
+        BlockRenderLayerMap.INSTANCE.putBlock(block, RenderLayer.getCutout());
+    }
 }
