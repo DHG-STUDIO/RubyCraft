@@ -46,7 +46,7 @@ CreativeTabBuilder creativeTab = CreativeTabBuilder.create(id(tabid));
         registry.registerItemGroup(creativeTab.getIdentifier(), creativeTab);
         return creativeTab;
     }
-
+  //  TODO: MCPitanLibでBlockRenderLayerMapが作成されたら変更する
     //Easy Block Render Layers
     public static void easyBlockRenderLayers(Block block)
     {
