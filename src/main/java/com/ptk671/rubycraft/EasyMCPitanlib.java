@@ -17,7 +17,7 @@ import net.pitan76.mcpitanlib.api.util.ItemUtil;
 import static com.ptk671.rubycraft.RubyCraft.MOD_ID;
 import static com.ptk671.rubycraft.RubyCraft.id;
 
-public class EasyRegistry {
+public class EasyMCPitanlib {
     public static CompatRegistry registry = CompatRegistry.createRegistry(MOD_ID);
     //Easy Item
     public static RegistryResult<Item> easyItem(String itemid, CreativeTabBuilder tab)
