@@ -57,7 +57,7 @@ public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvide
     }
 
     @Override
-    protected void appendProperties(StateManager.Builder<Block, BlockState> builder) {
+    public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
         builder.add(FACING);
     }
 
