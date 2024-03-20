@@ -4,6 +4,7 @@ import com.ptk671.rubycraft.Items;
 import net.minecraft.recipe.Ingredient;
 import net.minecraft.sound.SoundEvent;
 import net.minecraft.sound.SoundEvents;
+import net.minecraft.util.Identifier;
 import net.pitan76.mcpitanlib.api.item.ArmorEquipmentType;
 import net.pitan76.mcpitanlib.api.item.CompatibleArmorMaterial;
 
@@ -49,6 +50,11 @@ public class RubyArmorMaterial implements CompatibleArmorMaterial {
     @Override
     public String getName() {
         return "ruby";
+    }
+
+    @Override
+    public Identifier getId() {
+        return null;
     }
 
     @Override
