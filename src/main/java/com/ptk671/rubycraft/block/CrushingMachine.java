@@ -30,7 +30,7 @@ public class CrushingMachine extends Block {
     }
 
     @Override
-    public ActionResult  onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)  {
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit)  {
         if (world.isClient) {
             return ActionResult.SUCCESS;
         }
@@ -64,21 +64,21 @@ public class CrushingMachine extends Block {
 
         if (handStack.getItem() == RUBY_SWORD.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 1));
             player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_1));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_AXE.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 3));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 1));
             player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_2));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_PICKAXE.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 3));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 1));
             player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_2));
             return ActionResult.SUCCESS;
         }
@@ -92,39 +92,39 @@ public class CrushingMachine extends Block {
 
         if (handStack.getItem() == RUBY_HOE.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 1));
             player.giveItemStack(new ItemStack(SAW_DUST.get(), STICK_2));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_HELMET.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 5));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_CHESTPLATE.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 8));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 4));
             return ActionResult.SUCCESS;
         }
 
 
         if (handStack.getItem() == RUBY_LEGGINGS.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 7));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 3));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_BOOTS.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 4));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
             return ActionResult.SUCCESS;
         }
 
         if (handStack.getItem() == RUBY_GEAR.get()) {
             handStack.setCount(handStack.getCount() - 1);
-            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 4));
+            player.giveItemStack(new ItemStack(RUBY_DUST.get(), 2));
             return ActionResult.SUCCESS;
         }
 
