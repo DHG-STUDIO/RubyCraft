@@ -23,8 +23,8 @@ import static com.ptk671.rubycraft.Items.*;
 
 public class CrushingMachine extends Block {
 
-    int STICK_1 = 4;
-    int STICK_2 = 8;
+    int STICK_1 = 1;
+    int STICK_2 = 2;
     public CrushingMachine(CompatibleBlockSettings settings) {
         super(settings.build());
     }
