@@ -13,11 +13,11 @@
       "tag": "c:ruby_gears"
     },
     "S": {
-      "tag": "fabric:pickaxes"
+      "tag": "c:pickaxes"
     }
   },
   "result": {
-    "item": "rubycraft:crushing_machine0",
+    "item": "rubycraft:crushing_machine",
     "count": 1
   }
 }
