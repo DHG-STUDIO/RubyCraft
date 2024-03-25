@@ -37,10 +37,10 @@ public class Blocks {
                 .strength(3.5F, 6.0F)
         ));
 
-        RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.STONE)
-                .requiresTool()
+        RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .sounds(BlockSoundGroup.STONE)
                 .strength(3.5F)
+                .requiresTool()
         ));
 
         RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
@@ -55,7 +55,7 @@ public class Blocks {
                 .strength(3.5F, 6.0F)
         ));
 
-        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine0"), () -> new CrushingMachine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine"), () -> new CrushingMachine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
                 .requiresTool()
                 .sounds(BlockSoundGroup.METAL)
                 .strength(3.0F)
