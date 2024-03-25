@@ -6,7 +6,7 @@
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "rubycraft:crushing_machine0"
+          "name": "rubycraft:crushing_machine"
         }
       ],
       "conditions": [
