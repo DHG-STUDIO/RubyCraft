@@ -3,6 +3,7 @@ package com.ptk671.rubycraft;
 import net.minecraft.block.Block;
 import net.minecraft.item.Item;
 import net.minecraft.util.Identifier;
+
 import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.item.*;
@@ -10,13 +11,11 @@ import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
 import net.pitan76.mcpitanlib.api.util.ItemUtil;
 
-import java.util.function.Supplier;
-
 import static com.ptk671.rubycraft.RubyCraft.MOD_ID;
 
 public class EasyMCPitanlib {
 
-    //Easy MCPitanlib 1.0.1
+    //Easy MCPitanlib 1.1.0
     public static Identifier id(String patch) {
         return new Identifier(MOD_ID, patch);
     }
@@ -38,10 +37,10 @@ public class EasyMCPitanlib {
     }
 
     //AddBlockItem
-    public static RegistryResult<Item> addBlockItem(Supplier<Block> blockSupplier, String itemid, CompatibleItemSettings compatibleItemSettings)
+    public static RegistryResult<Item> addBlockItem(RegistryResult<Block> blockSupplier, String itemid, CompatibleItemSettings compatibleItemSettings)
     {
 
-        RegistryResult<Item> blockItem =  registry.registerItem(id(itemid), () -> ItemUtil.ofBlock(blockSupplier.get(), compatibleItemSettings));
+        RegistryResult<Item> blockItem =  registry.registerItem(id(itemid), () -> ItemUtil.ofBlock(blockSupplier.getOrNull(), compatibleItemSettings));
         return blockItem;
     }
 
@@ -61,6 +60,7 @@ public class EasyMCPitanlib {
 
     public static CompatRegistry registry = CompatRegistry.createRegistry(MOD_ID);
     //Easy Item
+    @Deprecated
     public static RegistryResult<Item> easyItem(String itemid, CreativeTabBuilder tab)
     {
         RegistryResult<Item> item =  registry.registerItem(id(itemid), () -> new ExtendItem(new CompatibleItemSettings().addGroup(tab)));
@@ -68,12 +68,11 @@ public class EasyMCPitanlib {
     }
 
     //EasyBlockItem
-    public static RegistryResult<Item> easyBlockItem(Supplier<Block> blockSupplier, String itemid, CreativeTabBuilder tab)
+    @Deprecated
+    public static RegistryResult<Item> easyBlockItem(RegistryResult<Block> blockSupplier, String itemid,CreativeTabBuilder creativeTabBuilder)
     {
-
-        RegistryResult<Item> blockItem =  registry.registerItem(id(itemid), () -> ItemUtil.ofBlock(blockSupplier.get(), new CompatibleItemSettings().addGroup(tab)));
+        RegistryResult<Item> blockItem =  registry.registerItem(id(itemid), () -> ItemUtil.ofBlock(blockSupplier.getOrNull(), new CompatibleItemSettings().addGroup(creativeTabBuilder)));
         return blockItem;
     }
-
     ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 }
