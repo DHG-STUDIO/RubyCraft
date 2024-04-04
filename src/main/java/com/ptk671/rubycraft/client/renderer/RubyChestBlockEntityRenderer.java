@@ -10,7 +10,6 @@ import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.TexturedRenderLayers;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.VertexConsumerProvider;
-import net.minecraft.client.render.block.entity.BlockEntityRendererFactory.Context;
 import net.minecraft.client.render.block.entity.ChestBlockEntityRenderer;
 import net.minecraft.client.render.block.entity.LightmapCoordinatesRetriever;
 import net.minecraft.client.render.entity.model.EntityModelLayers;
@@ -19,6 +18,8 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3f;
 import net.minecraft.world.World;
+import net.pitan76.mcpitanlib.api.client.registry.CompatRegistryClient;
+import net.pitan76.mcpitanlib.api.util.client.BlockEntityRendererUtil;
 
 import static com.ptk671.rubycraft.RubyCraft.id;
 
@@ -38,8 +39,8 @@ public class RubyChestBlockEntityRenderer<T extends ChestBlockEntity> extends Ch
     private final ModelPart doubleChestRightBase;
     private final ModelPart doubleChestRightLatch;
 
-    public RubyChestBlockEntityRenderer(Context ctx) {
-        super(ctx);
+    public RubyChestBlockEntityRenderer(CompatRegistryClient.BlockEntityRendererFactory.Context ctx) {
+        super(BlockEntityRendererUtil.convert(ctx));
 
         ModelPart modelPart = ctx.getLayerModelPart(EntityModelLayers.CHEST);
         this.singleChestBase = modelPart.getChild(BASE);
