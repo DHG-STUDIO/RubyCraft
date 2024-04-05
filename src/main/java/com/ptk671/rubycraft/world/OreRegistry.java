@@ -28,6 +28,7 @@ public class OreRegistry {
     public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACER_KEY = RegistryKey.of(RegistryKey.ofRegistry(new Identifier("worldgen/placed_feature")), id("ruby_ore"));
 
     public static void register() {
+        //TODO: Arch APIのデータパック対応後に変更
         if(MinecraftVersion.CURRENT.getSaveVersion().getId() >= 3218) {
             BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACER_KEY);
             return;
