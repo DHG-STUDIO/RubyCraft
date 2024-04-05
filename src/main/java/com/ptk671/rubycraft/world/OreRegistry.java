@@ -1,6 +1,11 @@
 package com.ptk671.rubycraft.world;
 
 import com.ptk671.rubycraft.Blocks;
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
+import net.minecraft.MinecraftVersion;
+import net.minecraft.util.Identifier;
+import net.minecraft.util.registry.RegistryKey;
 import net.minecraft.world.gen.GenerationStep;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.PlacedFeature;
@@ -20,7 +25,18 @@ public class OreRegistry {
             100
     );
 
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACER_KEY = RegistryKey.of(RegistryKey.ofRegistry(new Identifier("worldgen/placed_feature")), id("ruby_ore"));
+
     public static void register() {
+        if(MinecraftVersion.CURRENT.getSaveVersion().getId() >= 3218) {
+            BiomeModifications.addFeature(BiomeSelectors.foundInOverworld(), GenerationStep.Feature.UNDERGROUND_ORES, RUBY_ORE_PLACER_KEY);
+            return;
+        }
+
+        registerOld();
+    }
+
+    private static void registerOld() {
         ConfiguredFeature<?, ?> rubyOreConfigured = FeatureConfigUtil.createConfiguredFeature(
                 FeatureConfigUtil.createStoneOreFeatureConfig(
                         Blocks.RUBY_ORE.get().getDefaultState(),
