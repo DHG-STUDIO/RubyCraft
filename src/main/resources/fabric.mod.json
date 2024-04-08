@@ -11,9 +11,9 @@
     "mymai1208"
   ],
   "contact": {
-    "homepage": "https://github.com/Ptkiuo/RubyCraft",
-    "sources": "https://github.com/PTOM76/RubyCraft",
-    "issues": "https://github.com/Ptkiuo/RubyCraft/issues"
+    "homepage": "https://github.com/DHG-STUDIO/RubyCraft",
+    "sources": "https://github.com/DHG-STUDIO/RubyCraft",
+    "issues": "https://github.com/DHG-STUDIO/RubyCraft/issues"
   },
   "license": "CC0",
   "icon": "assets/rubycraft/icon.png",
@@ -30,7 +30,7 @@
     "fabricloader": "*",
     "mcpitanlib": ">=2.1.9",
     "minecraft": [
-      ">=1.16.5"
+      ">=1.16.4"
     ]
   }
 }
