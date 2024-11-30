@@ -1,40 +1,39 @@
 package com.ptk671.rubycraft.block;
 
 import com.ptk671.rubycraft.BlockEntities;
-import net.minecraft.block.Block;
-import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.entity.ItemEntity;
-import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtCompound;
-import net.minecraft.state.StateManager;
-import net.minecraft.state.property.DirectionProperty;
-import net.minecraft.state.property.Properties;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.util.shape.VoxelShapes;
-import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
-import net.pitan76.mcpitanlib.api.block.ExtendBlock;
 import net.pitan76.mcpitanlib.api.block.ExtendBlockEntityProvider;
-import net.pitan76.mcpitanlib.api.block.ExtendBlockProvider;
+import net.pitan76.mcpitanlib.api.block.args.v2.PlacementStateArgs;
+import net.pitan76.mcpitanlib.api.block.v2.CompatBlock;
+import net.pitan76.mcpitanlib.api.block.v2.CompatBlockProvider;
+import net.pitan76.mcpitanlib.api.block.v2.CompatibleBlockSettings;
+import net.pitan76.mcpitanlib.api.event.block.AppendPropertiesArgs;
 import net.pitan76.mcpitanlib.api.event.block.BlockBreakEvent;
 import net.pitan76.mcpitanlib.api.event.block.CollisionShapeEvent;
 import net.pitan76.mcpitanlib.api.event.block.result.BlockBreakResult;
+import net.pitan76.mcpitanlib.api.state.property.CompatProperties;
+import net.pitan76.mcpitanlib.api.state.property.DirectionProperty;
+import net.pitan76.mcpitanlib.midohra.block.BlockState;
 import org.jetbrains.annotations.Nullable;
 
 
-public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvider, ExtendBlockProvider {
+public class RubyStorage extends CompatBlock implements ExtendBlockEntityProvider, CompatBlockProvider {
     private final VoxelShape SHAPE_BOTTOM = VoxelShapes.cuboid(0.0, 0.1, 0.0, 0, 0.2, 0);
     private final VoxelShape SHAPE_TOP = VoxelShapes.cuboid(0.0, 15.8, 0.0, 15.9, 15.9, 15.9);
     private final VoxelShape SHAPE = VoxelShapes.union(SHAPE_BOTTOM, SHAPE_TOP);
 
-    public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
+    public static final DirectionProperty FACING = CompatProperties.HORIZONTAL_FACING;
 
     public RubyStorage(CompatibleBlockSettings settings) {
         super(settings);
-        setDefaultState(getStateManager().getDefaultState().with(Properties.HORIZONTAL_FACING, Direction.NORTH));
+        setDefaultState(getDefaultMidohraState().with(FACING, Direction.NORTH));
     }
 
     @Override
@@ -52,25 +51,28 @@ public class RubyStorage extends ExtendBlock implements ExtendBlockEntityProvide
     }
 
     @Override
-    public BlockState getPlacementState(ItemPlacementContext ctx) {
-        return super.getPlacementState(ctx).with(FACING, ctx.getPlayerFacing().getOpposite());
+    public BlockState getPlacementState(PlacementStateArgs args) {
+        BlockState state = super.getPlacementState(args);
+
+        return state.with(FACING, args.getHorizontalPlayerFacing().getOpposite());
     }
 
     @Override
-    public void appendProperties(StateManager.Builder<Block, BlockState> builder) {
-        builder.add(FACING);
+    public void appendProperties(AppendPropertiesArgs args) {
+        args.addProperty(FACING);
+        super.appendProperties(args);
     }
 
     @Override
     public BlockBreakResult onBreak(BlockBreakEvent event, Options options) {
         if(event.isClient()) {
-            return ExtendBlockProvider.super.onBreak(event, options);
+            return CompatBlockProvider.super.onBreak(event, options);
         }
 
         BlockEntity blockEntity = event.getWorld().getBlockEntity(event.getPos());
 
         if(blockEntity == null) {
-            return ExtendBlockProvider.super.onBreak(event, options);
+            return CompatBlockProvider.super.onBreak(event, options);
         }
 
         NbtCompound nbt = blockEntity.toInitialChunkDataNbt();

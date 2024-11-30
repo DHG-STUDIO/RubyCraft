@@ -4,20 +4,20 @@ import com.ptk671.rubycraft.fuels.Fuels;
 import com.ptk671.rubycraft.itemgroup.CreativeTabs;
 import com.ptk671.rubycraft.world.OreRegistry;
 import net.fabricmc.api.ModInitializer;
-import net.minecraft.util.Identifier;
-import net.pitan76.mcpitanlib.api.registry.CompatRegistry;
 import net.pitan76.mcpitanlib.api.registry.WorldGenRegistry;
+import net.pitan76.mcpitanlib.api.registry.v2.CompatRegistryV2;
+import net.pitan76.mcpitanlib.api.util.CompatIdentifier;
 
 public class RubyCraft implements ModInitializer {
     /**
      * Runs the mod initializer.
      */
     public static String MOD_ID = "rubycraft";
-    public static CompatRegistry registry = CompatRegistry.createRegistry(MOD_ID);
-    public static WorldGenRegistry worldGenRegistry = WorldGenRegistry.createRegistry(registry);
+    public static CompatRegistryV2 registry = CompatRegistryV2.create(MOD_ID);
+    public static WorldGenRegistry worldGenRegistry = WorldGenRegistry.createRegistry(registry.cr1);
 
-    public static Identifier id(String patch) {
-        return new Identifier(RubyCraft.MOD_ID, patch);
+    public static CompatIdentifier id(String patch) {
+        return new CompatIdentifier(RubyCraft.MOD_ID, patch);
     }
 
     @Override

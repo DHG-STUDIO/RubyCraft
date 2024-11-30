@@ -1,6 +1,6 @@
 package com.ptk671.rubycraft.block;
 
-import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
+import net.pitan76.mcpitanlib.api.block.v2.CompatibleBlockSettings;
 
 public class RubyStorageMk3 extends RubyStorage {
     public RubyStorageMk3(CompatibleBlockSettings settings) {

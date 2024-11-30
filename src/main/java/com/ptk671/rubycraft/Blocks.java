@@ -2,11 +2,12 @@ package com.ptk671.rubycraft;
 
 import com.ptk671.rubycraft.block.*;
 import net.minecraft.block.Block;
-import net.minecraft.sound.BlockSoundGroup;
-import net.pitan76.mcpitanlib.api.block.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.block.CompatibleMaterial;
 import net.pitan76.mcpitanlib.api.block.ExtendBlock;
+import net.pitan76.mcpitanlib.api.block.v2.CompatBlock;
+import net.pitan76.mcpitanlib.api.block.v2.CompatibleBlockSettings;
 import net.pitan76.mcpitanlib.api.registry.result.RegistryResult;
+import net.pitan76.mcpitanlib.api.sound.CompatBlockSoundGroup;
 
 import static com.ptk671.rubycraft.RubyCraft.id;
 import static com.ptk671.rubycraft.RubyCraft.registry;
@@ -24,61 +25,58 @@ public class Blocks {
     public static RegistryResult<Block> RUBY_STORAGE_MK3;
 
     public static void registry() {
-
-        RUBY_BLOCK = registry.registerBlock(id("ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_BLOCK = registry.registerBlock(id("ruby_block"), () -> new CompatBlock(new CompatibleBlockSettings(id("ruby_block"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.METAL)
-                .strength(5.0F, 6.0F)
-        ));
+                .sounds(CompatBlockSoundGroup.METAL)
+                .strength(5.0F, 6.0F)));
 
-        POLISHED_RUBY_BLOCK = registry.registerBlock(id("polished_ruby_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        POLISHED_RUBY_BLOCK = registry.registerBlock(id("polished_ruby_block"), () -> new CompatBlock(new CompatibleBlockSettings(id("polished_ruby_block"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.STONE)
+                .sounds(CompatBlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
         ));
 
-        RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new RubyOre(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
-                .sounds(BlockSoundGroup.STONE)
+        RUBY_ORE = registry.registerBlock(id("ruby_ore"), () -> new CompatBlock(new CompatibleBlockSettings(id("ruby_ore"), CompatibleMaterial.METAL)
+                .sounds(CompatBlockSoundGroup.STONE)
                 .strength(3.5F)
                 .requiresTool()
         ));
 
-        RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_CHEST = registry.registerBlock(id("ruby_chest"), () -> new RubyChest(new CompatibleBlockSettings(id("ruby_chest"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.METAL)
+                .sounds(CompatBlockSoundGroup.METAL)
                 .strength(3.0F, 6.0F)
         ));
 
-        MACHINE_BLOCK = registry.registerBlock(id("machine_block"), () -> new ExtendBlock(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        MACHINE_BLOCK = registry.registerBlock(id("machine_block"), () -> new ExtendBlock(new CompatibleBlockSettings(id("machine_block"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.METAL)
+                .sounds(CompatBlockSoundGroup.METAL)
                 .strength(3.5F, 6.0F)
         ));
 
-        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine"), () -> new CrushingMachine(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        CRUSHING_MACHINE = registry.registerBlock(id("crushing_machine"), () -> new CrushingMachine(new CompatibleBlockSettings(id("crushing_machine"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.METAL)
+                .sounds(CompatBlockSoundGroup.METAL)
                 .strength(3.0F)
         ));
 
-        RUBY_STORAGE = registry.registerBlock(id("ruby_storage"), () -> new RubyStorage(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_STORAGE = registry.registerBlock(id("ruby_storage"), () -> new RubyStorage(new CompatibleBlockSettings(id("ruby_storage"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.STONE)
+                .sounds(CompatBlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
                 .nonOpaque()
         ));
 
-        RUBY_STORAGE_MK2 = registry.registerBlock(id("ruby_storage_mk2"), () -> new RubyStorageMk2(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_STORAGE_MK2 = registry.registerBlock(id("ruby_storage_mk2"), () -> new RubyStorageMk2(new CompatibleBlockSettings(id("ruby_storage_mk2"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.STONE)
+                .sounds(CompatBlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
                 .nonOpaque()
         ));
 
-
-        RUBY_STORAGE_MK3 = registry.registerBlock(id("ruby_storage_mk3"), () -> new RubyStorageMk3(CompatibleBlockSettings.of(CompatibleMaterial.METAL)
+        RUBY_STORAGE_MK3 = registry.registerBlock(id("ruby_storage_mk3"), () -> new RubyStorageMk3(new CompatibleBlockSettings(id("ruby_storage_mk3"), CompatibleMaterial.METAL)
                 .requiresTool()
-                .sounds(BlockSoundGroup.STONE)
+                .sounds(CompatBlockSoundGroup.STONE)
                 .strength(3.5F, 6.0F)
                 .nonOpaque()
         ));

@@ -7,6 +7,6 @@ import static com.ptk671.rubycraft.RubyCraft.id;
 
 public class Textures {
     public static void register() {
-        CompatRegistryClient.registryClientSprite(TexturedRenderLayers.CHEST_ATLAS_TEXTURE, id("model/ruby_chest"));
+        CompatRegistryClient.registryClientSprite(TexturedRenderLayers.CHEST_ATLAS_TEXTURE, id("model/ruby_chest").toMinecraft());
     }
 }

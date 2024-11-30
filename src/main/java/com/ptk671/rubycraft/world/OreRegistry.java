@@ -25,7 +25,7 @@ public class OreRegistry {
             100
     );
 
-    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACER_KEY = RegistryKey.of(RegistryKey.ofRegistry(new Identifier("worldgen/placed_feature")), id("ruby_ore"));
+    public static final RegistryKey<PlacedFeature> RUBY_ORE_PLACER_KEY = RegistryKey.of(RegistryKey.ofRegistry(new Identifier("worldgen/placed_feature")), id("ruby_ore").toMinecraft());
 
     public static void register() {
         //TODO: Arch APIのデータパック対応後に変更
@@ -46,8 +46,8 @@ public class OreRegistry {
         );
         PlacedFeature rubyOrePlacer = PlacedFutureUtil.create(rubyOreConfigured, RUBY_ORE_PLACEMENT_MODIFIERS);
 
-        worldGenRegistry.registerFeature(id("ruby_ore_overworld"), () -> rubyOreConfigured);
-        worldGenRegistry.registerPlacedFeature(id("ruby_ore_overworld"), () -> rubyOrePlacer);
+        worldGenRegistry.registerFeature(id("ruby_ore_overworld").toMinecraft(), () -> rubyOreConfigured);
+        worldGenRegistry.registerPlacedFeature(id("ruby_ore_overworld").toMinecraft(), () -> rubyOrePlacer);
 
         WorldGenRegistry.replaceProperties(GenerationStep.Feature.UNDERGROUND_ORES, rubyOrePlacer);
     }

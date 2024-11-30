@@ -25,7 +25,7 @@ public class RubyStorageBlockEntityRenderer<T extends RubyStorageBlockEntity> im
     private void renderItems(RubyStorageBlockEntity entity, float tickDelta, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
         matrices.scale(0.5F, 0.5F, 0.5F);
 
-        Direction direction = entity.getCachedState().get(RubyStorage.FACING);
+        Direction direction = entity.getCachedState().get(RubyStorage.FACING.getProperty());
 
         int currentRenderCount = 0;
 

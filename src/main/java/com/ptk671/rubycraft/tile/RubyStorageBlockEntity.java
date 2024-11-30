@@ -11,6 +11,8 @@ import net.minecraft.nbt.NbtCompound;
 import net.minecraft.util.collection.DefaultedList;
 import net.minecraft.util.math.Direction;
 import net.pitan76.mcpitanlib.api.event.block.TileCreateEvent;
+import net.pitan76.mcpitanlib.api.event.nbt.ReadNbtArgs;
+import net.pitan76.mcpitanlib.api.event.nbt.WriteNbtArgs;
 import net.pitan76.mcpitanlib.api.event.tile.TileTickEvent;
 import net.pitan76.mcpitanlib.api.gui.inventory.IInventory;
 import net.pitan76.mcpitanlib.api.packet.UpdatePacketType;
@@ -29,18 +31,18 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     }
 
     @Override
-    public void readNbtOverride(NbtCompound nbt) {
-        super.readNbtOverride(nbt);
+    public void readNbt(ReadNbtArgs args) {
+        super.readNbt(args);
 
         items.clear();
-        Inventories.readNbt(nbt, items);
+        Inventories.readNbt(args.getNbt(), items);
     }
 
     @Override
-    public void writeNbtOverride(NbtCompound nbt) {
-        super.writeNbtOverride(nbt);
+    public void writeNbt(WriteNbtArgs args) {
+        super.writeNbt(args);
 
-        Inventories.writeNbt(nbt, items);
+        Inventories.writeNbt(args.getNbt(), items);
     }
 
     @Override
@@ -51,7 +53,7 @@ public class RubyStorageBlockEntity extends ExtendBlockEntity implements SidedIn
     @Override
     public NbtCompound toInitialChunkDataNbt() {
         NbtCompound nbt = super.toInitialChunkDataNbt();
-        writeNbtOverride(nbt);
+        writeNbt(new WriteNbtArgs(nbt));
 
         return nbt;
     }

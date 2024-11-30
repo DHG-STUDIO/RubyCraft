@@ -12,7 +12,7 @@ import net.minecraft.util.math.Direction;
 
 public class RenderUtil {
     public static void renderItem(ItemStack itemStack, RubyStorageBlockEntity entity, MatrixStack matrices, VertexConsumerProvider vertexConsumers, int light) {
-        matrices.multiply(entity.getCachedState().get(RubyStorage.FACING).getRotationQuaternion());
+        matrices.multiply(entity.getCachedState().get(RubyStorage.FACING.getProperty()).getRotationQuaternion());
         //アイテムを垂直に回転
         matrices.multiply(Direction.NORTH.getRotationQuaternion());
 
